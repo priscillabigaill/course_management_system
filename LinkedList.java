@@ -16,7 +16,7 @@ public class LinkedList {
         System.out.print("Choose a command: ");
     }
 
-    //Creating a course node
+    //create a course node
     private static class Course {
         private String courseName;
         private String courseId;
@@ -24,9 +24,12 @@ public class LinkedList {
         private String courseStartTime;
         private String courseEndTime;
         private String courseLecturerName;
+        private Course coursePrevious;
         private Course courseNext;
         private Student studentListHead;
+        private Student studentListTail;
 
+        //constructor for course
         public Course(String courseName, String courseId, String courseDay, String courseStartTime, String courseEndTime, String courseLecturerName, Student studentListHead) {
             this.courseName = courseName;
             this.courseId = courseId;
@@ -35,29 +38,34 @@ public class LinkedList {
             this.courseEndTime = courseEndTime;
             this.courseLecturerName = courseLecturerName;
             this.studentListHead = studentListHead;
+            this.coursePrevious = null;
             this.courseNext = null;
         }
 
+        //create a student node
         private static class Student {
             private String studentName;
             private String studentId;
+            private Student studentPrevious;
             private Student studentNext;
 
             public Student(String studentName, String studentId){
                 this.studentName = studentName;
                 this.studentId = studentId;
+                this.studentPrevious = null;
                 this.studentNext = null;
             }
         }
     }
 
-    private static Course head = null;
+    private static Course head, tail = null;
 
-    /*********************
-    *   (1) Add Course   *
-    **********************/
+    /**********************
+     *   (1) Add Course   *
+     **********************/
     public static void addCourse() {
         Scanner input = new Scanner(System.in);
+        //prompt for course details
         System.out.print("\nCourse Name: ");
         String courseName = input.next();
         System.out.print("Course Id: ");
@@ -71,83 +79,101 @@ public class LinkedList {
         System.out.print("Lecturer Name: ");
         String courseLecturerName = input.next();
         Course.Student studentList = null;
+
+        //create a new course object
         Course newCourse = new Course(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName, studentList);
 
         if (head==null) {
-            head = newCourse;
+            //if the list is empty, make the new course the head and tail
+            head = tail = newCourse;
+            head.coursePrevious = null;
+            tail.courseNext = null;
         } else {
-            Course currentCourse = head;
-            while (currentCourse.courseNext != null) {
-                currentCourse = currentCourse.courseNext;
-            }
-            currentCourse.courseNext = newCourse;
+            //if the list is not empty, append the course to the end
+            tail.courseNext = newCourse;
+            newCourse.coursePrevious = tail;
+            tail = newCourse;
+            tail.courseNext = null;
         }
+
         System.out.println("\n✅The course has been successfully added");
     }
 
-    /**********************
-    *  (2) Remove Course  *
-    ***********************/
+    /***********************
+     *  (2) Remove Course  *
+     ***********************/
     public static void removeCourse() {
+        //check if the list is empty
+        if (head == null) {
+            System.out.println("\n❌No course available!");
+            return;
+        }
+
         Scanner input = new Scanner(System.in);
+        //prompt for a course to remove
         System.out.print("\nCourse Name: ");
         String courseName = input.nextLine();
 
-        //check if list is empty
-        if (head == null) {
+        //search for the course with the matching name
+        Course currentCourse = head;
+        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
+            currentCourse = currentCourse.courseNext;
+        }
+        //reach the end of the linkedList without finding a matching course name
+        if (currentCourse == null) {
             System.out.println("\n❌No course found with that name!");
             return;
         }
-        //check if first course has matching name
-        else if (head.courseName.equals(courseName)) {
-            head = head.courseNext; //remove first contact
-            System.out.println("\n✅Successfully removed course!");
-            return;
+
+        //if found, remove the course from the linkedList
+        if (currentCourse.coursePrevious == null) {
+            head = head.courseNext;
+        } else {
+            currentCourse.coursePrevious.courseNext = currentCourse.courseNext;
         }
-        //search for course with matching name
-        Course current = head;
-        while (current.courseNext != null && !current.courseNext.courseName.equals(courseName)) {
-            current = current.courseNext;
+
+        if (currentCourse.courseNext != null) {
+            currentCourse.courseNext.coursePrevious = currentCourse.coursePrevious;  //update next course's previous reference
         }
-        //reaching the end of the linkedList without finding a matching course name
-        if (current.courseNext == null) {
-            System.out.println("\n❌No course found with that name!");
-            return;
-        }
-        //if found, remove contact from linkedList
-        current.courseNext = current.courseNext.courseNext;
         System.out.println("\n✅Successfully removed course!");
     }
 
-    /**********************
-    *  (3) Modify Course  *
-    ***********************/
+    /***********************
+     *  (3) Modify Course  *
+     ***********************/
     public static void modifyCourse() {
+        //check if the list is empty
+        if (head == null) {
+            System.out.println("\n❌No course available!");
+            return;
+        }
+
         Scanner input = new Scanner(System.in);
+        //prompt for a course to modify
         System.out.print("\nCourse Name: ");
         String courseName = input.nextLine();
 
-        //Search for course with matching name
-        Course current = head;
-        while (current != null && !current.courseName.equals(courseName)) {
-            current = current.courseNext;
+        //search for course with matching name
+        Course currentCourse = head;
+        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
+            currentCourse = currentCourse.courseNext;
         }
-        //If course not found
-        if (current == null) {
+        //if the course is not found
+        if (currentCourse == null) {
             System.out.println("\n❌No course found with that name!");
             return;
         }
 
-        //Display current course information
+        //display current course information
         System.out.println("\nCurrent Course Information: ");
-        System.out.println("Course Name: " + current.courseName);
-        System.out.println("Course ID: " + current.courseId);
-        System.out.println("Day: " + current.courseDay);
-        System.out.println("Start Time: " + current.courseStartTime);
-        System.out.println("End Time: " + current.courseEndTime);
-        System.out.println("Lecturer Name: " + current.courseLecturerName);
+        System.out.println("Course Name: " + currentCourse.courseName);
+        System.out.println("Course ID: " + currentCourse.courseId);
+        System.out.println("Day: " + currentCourse.courseDay);
+        System.out.println("Start Time: " + currentCourse.courseStartTime);
+        System.out.println("End Time: " + currentCourse.courseEndTime);
+        System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
 
-        //Modify course with new information
+        //modify course with new information
         System.out.println("\nEnter new course information: ");
         System.out.print("Day: ");
         String day = input.nextLine();
@@ -158,24 +184,26 @@ public class LinkedList {
         System.out.print("Lecturer Name: ");
         String lecturerName = input.nextLine();
 
-        //Update course
-        current.courseDay = day;
-        current.courseStartTime = startTime;
-        current.courseEndTime = endTime;
-        current.courseLecturerName = lecturerName;
+        //update course
+        currentCourse.courseDay = day;
+        currentCourse.courseStartTime = startTime;
+        currentCourse.courseEndTime = endTime;
+        currentCourse.courseLecturerName = lecturerName;
 
         System.out.println("\n✅Successfully updated course!");
     }
 
-    /**********************
-    *   (4) View Course   *
-    ***********************/
+    /***********************
+     *   (4) View Course   *
+     ***********************/
     public static void viewCourse() {
-       if (head == null) {
-           System.out.println("No courses available.");
-       } else {
-           Course currentCourse = head;
-           while (currentCourse != null) {
+        //check if the course list is empty
+        if (head == null) {
+            System.out.println("\n❌No courses available.");
+        } else {
+            Course currentCourse = head;
+            while (currentCourse != null) {
+                //display course details
                 System.out.println("\n-Course Details-");
                 System.out.println("Course Name: " + currentCourse.courseName);
                 System.out.println("Course ID: " + currentCourse.courseId);
@@ -184,22 +212,25 @@ public class LinkedList {
                 System.out.println("End Time: " + currentCourse.courseEndTime);
                 System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
                 currentCourse = currentCourse.courseNext;
-           }
-       }
+            }
+        }
     }
 
-    /******************************
-    *  (5) Search Course by Name  *
-    *******************************/
+    /*******************************
+     *  (5) Search Course by Name  *
+     *******************************/
     public static void searchCoursebyName() {
         Scanner input = new Scanner(System.in);
+        //prompt for a course to search
         System.out.print("\nCourse Name: ");
         String courseName = input.nextLine();
 
         Course currentCourse = head;
         boolean found = false;
 
-        while(currentCourse != null) {
+        //iterate over the course list to find the specified course
+        while (currentCourse != null) {
+            //check if the current course matches the specified course name
             if (currentCourse.courseName.equals(courseName)) {
                 System.out.println("\n-Course Details-");
                 System.out.println("Course Name: " + currentCourse.courseName);
@@ -207,15 +238,16 @@ public class LinkedList {
                 System.out.println("Day: " + currentCourse.courseDay);
                 System.out.println("Start Time: " + currentCourse.courseStartTime);
                 System.out.println("End Time: " + currentCourse.courseEndTime);
-                System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
-                System.out.println();
+                System.out.println("Lecturer Name: " + currentCourse.courseLecturerName + "\n");
 
+                //check if there are any enrolled students in the course
                 if (currentCourse.studentListHead == null) {
                     System.out.println("No students enrolled.");
                 } else {
                     System.out.print("-Enrolled Students-");
                     Course.Student currentStudent = currentCourse.studentListHead;
                     while (currentStudent != null) {
+                        //display details of each enrolled student
                         System.out.println("\nName (ID): " + currentStudent.studentName + " (" + currentStudent.studentId + ")");
                         currentStudent = currentStudent.studentNext;
                     }
@@ -225,73 +257,82 @@ public class LinkedList {
             currentCourse = currentCourse.courseNext;
         }
 
+        //if no matching course is found
         if (!found){
-            System.out.println("\n❌No course found with that name!");
+            System.out.println("❌No course found with that name!");
         }
     }
 
-    /********************************
-    *  (6) Add Student to a course  *
-    *********************************/
+    /*********************************
+     *  (6) Add Student to a course  *
+     *********************************/
     public static void addStudent() {
+        //check if the list is empty
+        if (head == null) {
+            System.out.println("\n❌No course available!");
+            return;
+        }
+
         Scanner scanner = new Scanner(System.in);
-        // Prompting for student details
-        System.out.print("Enter student name: ");
+        //prompt for student details
+        System.out.print("\nEnter student name: ");
         String name = scanner.nextLine();
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
 
-        // Creating a new student object
+        //create a new student object
         Course.Student newStudent = new Course.Student(name, id);
 
-        // Checking if the course list is empty
-        if (head == null) {
-            System.out.println("No courses available.");
-            return;
-        }
-
-        // Prompting for course ID to add the student
+        //prompt for course ID to add the student
         System.out.print("Enter course ID to add the student: ");
         String courseName = scanner.nextLine();
 
         Course currentCourse = head;
 
-        // Iterating over the course list to find the specified course
+        //iterate over the course list to find the specified course
         while (currentCourse != null) {
             if (currentCourse.courseId.equals(courseName)) {
-                // If the specified course is found, adding the student to the course
+                //if the specified course is found, adding the student to the course
                 if (currentCourse.studentListHead == null) {
-                    // If the student list is empty, setting the new student as the head of the list
-                    currentCourse.studentListHead = newStudent;
+                    //if the student list is empty, setting the new student as the head of the list
+                    currentCourse.studentListHead = currentCourse.studentListTail = newStudent;
+                    currentCourse.studentListHead.studentPrevious = null;
+                    currentCourse.studentListTail.studentNext = null;
                 } else {
-                    // If the student list is not empty, iterating to the end of the list and adding the new student
-                    Course.Student lastStudent = currentCourse.studentListHead;
-                    while (lastStudent.studentNext != null) {
-                        lastStudent = lastStudent.studentNext;
-                    }
-                    lastStudent.studentNext = newStudent;
+                    //if the student list is not empty, iterating to the end of the list and adding the new student
+                    currentCourse.studentListTail.studentNext = newStudent;
+                    newStudent.studentPrevious = currentCourse.studentListTail;
+                    currentCourse.studentListTail = newStudent;
+                    currentCourse.studentListTail.studentNext = null;
                 }
-                System.out.println("\nStudent added to the course successfully.");
+                System.out.println("\n✅Student added to the course successfully.");
                 return;
             }
             currentCourse = currentCourse.courseNext;
         }
 
-        // If the specified course is not found
-        System.out.println("Course not found.");
+        //if the specified course is not found
+        System.out.println("❌Course not found.");
     }
 
-    /*************************************
-    *  (7) Remove Student from a course  *
-    **************************************/
+    /**************************************
+     *  (7) Remove Student from a course  *
+     **************************************/
     public static void removeStudent() {
+        //check if the list is empty
+        if (head == null) {
+            System.out.println("\n❌No course available!");
+            return;
+        }
+
         Scanner input = new Scanner(System.in);
+        //prompt the course id and student id to be removed
         System.out.print("\nCourse ID: ");
         String courseId = input.nextLine();
         System.out.print("Student ID: ");
         String studentId = input.nextLine();
 
-        // Search for course with matching ID
+        //search for course with matching ID
         Course currentCourse = head;
         while (currentCourse != null && !currentCourse.courseId.equals(courseId)) {
             currentCourse = currentCourse.courseNext;
@@ -301,11 +342,9 @@ public class LinkedList {
             return;
         }
 
-        // Search for student with matching ID
+        //search for student with matching ID
         Course.Student currentStudent = currentCourse.studentListHead;
-        Course.Student prevStudent = null;
         while (currentStudent != null && !currentStudent.studentId.equals(studentId)) {
-            prevStudent = currentStudent;
             currentStudent = currentStudent.studentNext;
         }
         if (currentStudent == null) {
@@ -313,11 +352,15 @@ public class LinkedList {
             return;
         }
 
-        // Remove student from list
-        if (prevStudent == null) {
+        //remove student from list
+        if (currentStudent.studentPrevious == null) {
             currentCourse.studentListHead = currentStudent.studentNext;
         } else {
-            prevStudent.studentNext = currentStudent.studentNext;
+            currentStudent.studentPrevious.studentNext = currentStudent.studentNext;
+        }
+
+        if (currentStudent.studentNext != null) {
+            currentStudent.studentNext.studentPrevious = currentStudent.studentPrevious;      //update next student's previous reference
         }
         System.out.println("\n✅Successfully removed " + currentStudent.studentName + " from course!");
     }
@@ -331,23 +374,15 @@ public class LinkedList {
             displayMenu();
             choice = input.nextLine();
 
-            if (choice.equals("1")) {
-                addCourse();
-            } else if (choice.equals("2")) {
-                removeCourse();
-            } else if (choice.equals("3")) {
-                modifyCourse();
-            } else if (choice.equals("4")) {
-                viewCourse();
-            } else if (choice.equals("5")) {
-                searchCoursebyName();
-            } else if (choice.equals("6")) {
-                addStudent();
-            } else if (choice.equals("7")) {
-                removeStudent();
+            switch (choice) {
+                case "1" -> addCourse();
+                case "2" -> removeCourse();
+                case "3" -> modifyCourse();
+                case "4" -> viewCourse();
+                case "5" -> searchCoursebyName();
+                case "6" -> addStudent();
+                case "7" -> removeStudent();
             }
         } while(!choice.equals("8"));
     }
 }
-
-
