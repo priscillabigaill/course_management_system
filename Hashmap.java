@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Hashmap {
     private static HashMap<String, Course> courses = new HashMap<>();
 
