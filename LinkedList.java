@@ -60,7 +60,7 @@ public class LinkedList {
 
     private static Course head, tail = null;
 
-    /**********************
+    /*********************
      *   (1) Add Course   *
      **********************/
     public static void addCourse() {
@@ -99,7 +99,7 @@ public class LinkedList {
         System.out.println("\n✅The course has been successfully added");
     }
 
-    /***********************
+    /**********************
      *  (2) Remove Course  *
      ***********************/
     public static void removeCourse() {
@@ -138,7 +138,7 @@ public class LinkedList {
         System.out.println("\n✅Successfully removed course!");
     }
 
-    /***********************
+    /**********************
      *  (3) Modify Course  *
      ***********************/
     public static void modifyCourse() {
@@ -216,7 +216,7 @@ public class LinkedList {
         }
     }
 
-    /*******************************
+    /******************************
      *  (5) Search Course by Name  *
      *******************************/
     public static void searchCoursebyName() {
@@ -263,7 +263,7 @@ public class LinkedList {
         }
     }
 
-    /*********************************
+    /********************************
      *  (6) Add Student to a course  *
      *********************************/
     public static void addStudent() {
@@ -283,15 +283,15 @@ public class LinkedList {
         //create a new student object
         Course.Student newStudent = new Course.Student(name, id);
 
-        //prompt for course ID to add the student
-        System.out.print("Enter course ID to add the student: ");
+        //prompt for course name to add the student
+        System.out.print("Enter course name to add the student: ");
         String courseName = scanner.nextLine();
 
         Course currentCourse = head;
 
         //iterate over the course list to find the specified course
         while (currentCourse != null) {
-            if (currentCourse.courseId.equals(courseName)) {
+            if (currentCourse.courseName.equals(courseName)) {
                 //if the specified course is found, adding the student to the course
                 if (currentCourse.studentListHead == null) {
                     //if the student list is empty, setting the new student as the head of the list
@@ -327,14 +327,14 @@ public class LinkedList {
 
         Scanner input = new Scanner(System.in);
         //prompt the course id and student id to be removed
-        System.out.print("\nCourse ID: ");
-        String courseId = input.nextLine();
+        System.out.print("\nCourse Name: ");
+        String courseName = input.nextLine();
         System.out.print("Student ID: ");
         String studentId = input.nextLine();
 
         //search for course with matching ID
         Course currentCourse = head;
-        while (currentCourse != null && !currentCourse.courseId.equals(courseId)) {
+        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
             currentCourse = currentCourse.courseNext;
         }
         if (currentCourse == null) {
