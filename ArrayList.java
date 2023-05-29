@@ -93,7 +93,7 @@ class Course {
     }
 }
 
-public class Arrays {
+public class ArrayList {
     //create a courseList arrayList that will store all courses
     private static ArrayList<Course> courseList = new ArrayList<>();
     public static void displayMenu() {
