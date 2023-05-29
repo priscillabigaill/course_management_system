@@ -1,5 +1,3 @@
-package finalProject;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -93,7 +91,7 @@ class Course {
     }
 }
 
-public class ArrayList {
+public class Arraylist {
     //create a courseList arrayList that will store all courses
     private static ArrayList<Course> courseList = new ArrayList<>();
     public static void displayMenu() {
