@@ -9,7 +9,6 @@ public class BinarySearchTree {
         System.out.println("(2) Remove course");
         System.out.println("(3) Edit course");
         System.out.println("(4) View course details");
-        System.out.println("(5) Search course by name");
         System.out.println("(6) Add student to a course");
         System.out.println("(7) Remove student from a course");
         System.out.println("(8) Exit");
@@ -65,22 +64,7 @@ public class BinarySearchTree {
     /**********************
      *   (1) Add Course   *
      **********************/
-    public static void addCourse() {
-        Scanner input = new Scanner(System.in);
-        // prompt for course details
-        System.out.print("\nCourse Name: ");
-        String courseNew = input.nextLine();
-        System.out.print("Course Id: ");
-        String idNew = input.nextLine();
-        System.out.print("Day: ");
-        String dayNew = input.nextLine();
-        System.out.print("Start Time: ");
-        String startTimeNew = input.nextLine();
-        System.out.print("End Time: ");
-        String endTimeNew = input.nextLine();
-        System.out.print("Lecturer Name: ");
-        String lectureNameNew = input.nextLine();
-
+    public static void addCourse(String courseNew, String idNew, String dayNew, String startTimeNew, String endTimeNew, String lectureNameNew) {
         // create a new course object
         Course newCourse = new Course(courseNew, idNew, dayNew, startTimeNew, endTimeNew, lectureNameNew);
 
@@ -120,23 +104,114 @@ public class BinarySearchTree {
      *  (2) Remove Course  *
      ***********************/
 
-    public static void removeCourse() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter course name to remove: ");
-        String courseName = input.next();
+    // public static void removeCourse(String courseName) {
+    //     // initialize a variable current as the root of the binary tree
+    //     Course current = root;
+    //     // traverse the binary tree to try and find a course with the inputted name
+    //     while (current != null) {
+    //         int cmp = courseName.compareToIgnoreCase(current.courseName);
+    //         if (cmp == 0) {
+    //             break;
+    //         } else if (cmp < 0) {
+    //             current = current.left;
+    //         } else {
+    //             current = current.right;
+    //         }
+    //     }
+    //     // if course is not found
+    //     if (current == null) {  
+    //         System.out.println("Course not found.");
+    //         return;
+    //     }
+
+    //     // If the node has no children
+    //     if (current.left == null && current.right == null) {
+    //         // if it is the root
+    //         if (current == root) {
+    //             // remove it
+    //             root = null;
+    //         } else {
+    //             // if it is not the root
+    //             Course parent = current.parent;
+    //             // check whether current is its parent's left or right child, then remove it
+    //             if (current == parent.left) {
+    //                 parent.left = null;
+    //             } else {
+    //                 parent.right = null;
+    //             }
+    //         }
+
+    //         // if the node has two children
+    //     } else if (current.left != null && current.right != null) {
+    //         // set successor as right child of current node
+    //         // (because successor is always on the right subtree)
+    //         Course successor = current.right;
+    //         // traverse to the leftmost node (successor)
+    //         while (successor.left != null) {
+    //             successor = successor.left;
+    //         }
+    //         // swap left child of current node to the left child of successor
+    //         successor.left = current.left;
+    //         // if the successor is not the right child of the current node,
+    //         // swap the right child of the current node with the right child of the successor
+    //         if (successor != current.right) {
+    //             successor.right = current.right;
+    //         }
+    //         // if the current node is the root, set the root to the successor
+    //         if (current == root) {
+    //             root = successor;
+
+    //             // otherwise, set the parent's child pointer to the successor
+    //         } else {
+    //             Course parent = current.parent;
+    //             if (current == parent.left) {
+    //                 parent.left = successor;
+    //             } else {
+    //                 parent.right = successor;
+    //             }
+    //             successor.parent = parent;
+    //         }
+    //         //if the node only has one child
+    //     } else {
+    //         // remove it and connect the child to the parent
+    //         Course child = current.left != null ? current.left : current.right;
+    //         // if the current node is the root, set the root to the child
+    //         if (current == root) {
+    //             root = child;
+    //         } else { // otherwise, set the parent's child pointer to the child
+    //             Course parent = current.parent;
+    //             // if current node is the left child
+    //             if (current == parent.left) {
+    //                 parent.left = child;
+    //             } else { // if current node is the right child
+    //                 parent.right = child;
+    //             }
+    //         }
+    //     }
+
+    //     System.out.println("Course successfully removed.");
+    // }
+
+    public static void removeCourse(String courseName) {
         // initialize a variable current as the root of the binary tree
         Course current = root;
+        // initialize a variable parent as null
+        Course parent = null;
+
         // traverse the binary tree to try and find a course with the inputted name
         while (current != null) {
             int cmp = courseName.compareToIgnoreCase(current.courseName);
             if (cmp == 0) {
                 break;
             } else if (cmp < 0) {
+                parent = current;
                 current = current.left;
             } else {
+                parent = current;
                 current = current.right;
             }
         }
+
         // if course is not found
         if (current == null) {
             System.out.println("Course not found.");
@@ -151,7 +226,6 @@ public class BinarySearchTree {
                 root = null;
             } else {
                 // if it is not the root
-                Course parent = current.parent;
                 // check whether current is its parent's left or right child, then remove it
                 if (current == parent.left) {
                     parent.left = null;
@@ -159,9 +233,9 @@ public class BinarySearchTree {
                     parent.right = null;
                 }
             }
-
+        }
         // if the node has two children
-        } else if (current.left != null && current.right != null) {
+        else if (current.left != null && current.right != null) {
             // set successor as right child of current node
             // (because successor is always on the right subtree)
             Course successor = current.right;
@@ -179,30 +253,28 @@ public class BinarySearchTree {
             // if the current node is the root, set the root to the successor
             if (current == root) {
                 root = successor;
-
-                // otherwise, set the parent's child pointer to the successor
             } else {
-                Course parent = current.parent;
+                // otherwise, set the parent's child pointer to the successor
                 if (current == parent.left) {
                     parent.left = successor;
                 } else {
                     parent.right = successor;
                 }
-                successor.parent = parent;
             }
-        //if the node only has one child
-        } else {
+            successor.parent = parent;
+        }
+        // if the node only has one child
+        else {
             // remove it and connect the child to the parent
             Course child = current.left != null ? current.left : current.right;
             // if the current node is the root, set the root to the child
             if (current == root) {
                 root = child;
-            } else { // otherwise, set the parent's child pointer to the child
-                Course parent = current.parent;
-                // if current node is the left child
+            } else {
+                // otherwise, set the parent's child pointer to the child
                 if (current == parent.left) {
                     parent.left = child;
-                } else { // if current node is the right child
+                } else {
                     parent.right = child;
                 }
             }
@@ -212,15 +284,9 @@ public class BinarySearchTree {
     }
 
     /***********************
-     *  (3) Modify Course  *
-     ***********************/
-    public static void modifyCourse() {
-
-        // prompt user to input course name to modify
-        Scanner input = new Scanner(System.in);
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
+    *  (3) Modify Course  *
+    ***********************/
+    public static void modifyCourse(String courseName, String newCourseName, String courseID, String day, String startTime, String endTime, String lecturerName) {
         // search for course with matching name
         Course currentCourse = root;
         while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
@@ -234,33 +300,11 @@ public class BinarySearchTree {
         }
 
         // if course is found
-        // display current course information
-        System.out.println("\nCurrent Course Information: ");
-        System.out.println("Course Name: " + currentCourse.courseName);
-        System.out.println("Course ID: " + currentCourse.courseId);
-        System.out.println("Day: " + currentCourse.courseDay);
-        System.out.println("Start Time: " + currentCourse.courseStartTime);
-        System.out.println("End Time: " + currentCourse.courseEndTime);
-        System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
-
+        
         // modify course with new information
-        System.out.println("\nEnter new course information: ");
-        System.out.print("Course name: ");
-        String name = input.nextLine();
-        System.out.print("Course ID: ");
-        String ID = input.nextLine();
-        System.out.print("Day: ");
-        String day = input.nextLine();
-        System.out.print("Start Time: ");
-        String startTime = input.nextLine();
-        System.out.print("End Time: ");
-        String endTime = input.nextLine();
-        System.out.print("Lecturer Name: ");
-        String lecturerName = input.nextLine();
 
-        // update course with new info
-        currentCourse.courseId = ID;
-        currentCourse.courseName = name;
+        currentCourse.courseName = newCourseName;
+        currentCourse.courseId = courseID;
         currentCourse.courseDay = day;
         currentCourse.courseStartTime = startTime;
         currentCourse.courseEndTime = endTime;
@@ -268,6 +312,7 @@ public class BinarySearchTree {
 
         System.out.println("\n✅Successfully updated course!");
     }
+
 
     /***********************
      *   (4) View Courses   *
@@ -305,15 +350,10 @@ public class BinarySearchTree {
 
 
     /*******************************
-     *  (5) Search Course by Name  *
-     *******************************/
+    *  (5) Search Course by Name  *
+    *******************************/
 
-    public static void searchCourseByName() {
-        Scanner input = new Scanner(System.in);
-        //prompt the user to input course name to search
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
+    public static void searchCourseByName(String courseName) {
         // Recursively search for the specified course in the tree
         boolean found = searchCourseByName(root, courseName);
 
@@ -362,30 +402,21 @@ public class BinarySearchTree {
         return foundLeft || foundRight;
     }
 
+
+
     /*********************************
      *  (6) Add Student to a course  *
      *********************************/
 
-    public static void addStudent() {
+    public static void addStudent(String name, String id, String courseId) {
         // check if the tree is empty (no courses available)
         if (root == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        // prompt user to input needed details
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("\nEnter student name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter student ID: ");
-        String id = scanner.nextLine();
-
         // create new student object with inputted details
         Course.Student newStudent = new Course.Student(name, id);
-
-        // prompt user to enter course id
-        System.out.print("Enter course ID to add the student: ");
-        String courseId = scanner.nextLine();
 
         // search for course and add the student if found
         boolean found = addStudentToCourse(root, courseId, newStudent);
@@ -528,13 +559,62 @@ public class BinarySearchTree {
             choice = input.nextLine();
 
             switch (choice) {
-                case "1" -> addCourse();
-                case "2" -> removeCourse();
-                case "3" -> modifyCourse();
-                case "4" -> viewCourses();
-                case "5" -> searchCourseByName();
-                case "6" -> addStudent();
-                case "7" -> removeStudent();
+                case "1":
+                    Scanner add = new Scanner(System.in);
+                    // prompt for course details
+                    System.out.print("\nCourse Name: ");
+                    String courseNew = add.nextLine();
+                    System.out.print("Course Id: ");
+                    String idNew = add.nextLine();
+                    System.out.print("Day: ");
+                    String dayNew = add.nextLine();
+                    System.out.print("Start Time: ");
+                    String startTimeNew = add.nextLine();
+                    System.out.print("End Time: ");
+                    String endTimeNew = add.nextLine();
+                    System.out.print("Lecturer Name: ");
+                    String lectureNameNew = add.nextLine();
+                    addCourse(courseNew, idNew, dayNew, startTimeNew, endTimeNew, lectureNameNew);
+                case "2":
+                    Scanner rmv = new Scanner(System.in);
+                    System.out.print("Enter course name to remove: ");
+                    String courseName = rmv.next();
+                    removeCourse(courseName);
+               case "3":
+                    Scanner modify = new Scanner(System.in);
+                    System.out.print("Enter the name of the course to modify: ");
+                    String courseToModify = modify.nextLine();
+                    System.out.print("Enter the new course name: ");
+                    String newCourseName = modify.nextLine();
+                    System.out.print("Enter the new course ID: ");
+                    String newCourseID = modify.nextLine();
+                    System.out.print("Enter the new course day: ");
+                    String newCourseDay = modify.nextLine();
+                    System.out.print("Enter the new course start time: ");
+                    String newCourseStartTime = modify.nextLine();
+                    System.out.print("Enter the new course end time: ");
+                    String newCourseEndTime = modify.nextLine();
+                    System.out.print("Enter the new course lecturer name: ");
+                    String newLecturerName = modify.nextLine();
+                    modifyCourse(courseToModify, newCourseName, newCourseID, newCourseDay, newCourseStartTime, newCourseEndTime, newLecturerName);
+                case "4" : viewCourses();
+                case "5":
+                    Scanner search = new Scanner(System.in);
+                    System.out.print("\nCourse Name: ");
+                    String courseToSearch = search.nextLine();
+                    searchCourseByName(courseToSearch);
+                case "6":
+                    // prompt user to input needed details
+                    Scanner AddStud = new Scanner(System.in);
+                    System.out.print("\nEnter student name: ");
+                    String name = AddStud.nextLine();
+                    System.out.print("Enter student ID: ");
+                    String id = AddStud.nextLine();
+                    // prompt user to enter course id
+                    System.out.print("Enter course ID to add the student: ");
+                    String courseId = AddStud.nextLine();
+                    addStudent(name, id, courseId);
+                case "7": removeStudent();
             }
         } while(!choice.equals("8"));
     }
