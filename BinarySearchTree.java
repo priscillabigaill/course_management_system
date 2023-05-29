@@ -463,22 +463,15 @@ public class BinarySearchTree {
      *  (7) Remove Student from a course  *
      **************************************/
 
-    public static void removeStudent() {
+    public static void removeStudent(String rmvCourseId, String rmvStudentId) {
         // check if tree is empty
         if (root == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        // prompt user to input course id ans student id
-        Scanner input = new Scanner(System.in);
-        System.out.print("\nCourse ID: ");
-        String courseId = input.nextLine();
-        System.out.print("Student ID: ");
-        String studentId = input.nextLine();
-
         // recursively search for the course with the specified ID in the tree
-        Course course = findCourseById(root, courseId);
+        Course course = findCourseById(root, rmvCourseId);
 
         // if the course was not found
         if (course == null) {
@@ -488,7 +481,7 @@ public class BinarySearchTree {
 
         // if course is found
         // remove student from the course
-        boolean removed = removeStudentFromCourse(course, studentId);
+        boolean removed = removeStudentFromCourse(course, rmvStudentId);
 
         // if student was not found in the course
         if (!removed) {
@@ -499,26 +492,26 @@ public class BinarySearchTree {
     }
 
     // helper method to find the course with the specified id
-    private static Course findCourseById(Course node, String courseId) {
+    private static Course findCourseById(Course node, String rmvCourseId) {
         // check if node is empty
         if (node == null) {
             return null;
         }
         // if the current node matches the specified course id
-        if (node.courseId.equals(courseId)) {
+        if (node.courseId.equals(rmvCourseId)) {
             return node;
         }
         // recursively search the left and right subtrees
-        Course found = findCourseById(node.left, courseId);
+        Course found = findCourseById(node.left, rmvCourseId);
         if (found == null) {
-            found = findCourseById(node.right, courseId);
+            found = findCourseById(node.right, rmvCourseId);
         }
         // return course that was found
         return found;
     }
 
     // helper method to remove the student from the course
-    private static boolean removeStudentFromCourse(Course course, String studentId) {
+    private static boolean removeStudentFromCourse(Course course, String rmvStudentId) {
         // pointer to current student
         Course.Student current = course.studentListHead;
         // pointer to previous student
@@ -526,7 +519,7 @@ public class BinarySearchTree {
 
         // traverse the student list and find the student to remove
         while (current != null) {
-            if (current.studentId.equals(studentId)) {
+            if (current.studentId.equals(rmvStudentId)) {
                 // if the student is found
                 // check if student is the head of the list
                 if (prev == null) {
@@ -549,6 +542,7 @@ public class BinarySearchTree {
         }
         return false;
     }
+    
     //Main Method and Program Execution//
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -614,7 +608,15 @@ public class BinarySearchTree {
                     System.out.print("Enter course ID to add the student: ");
                     String courseId = AddStud.nextLine();
                     addStudent(name, id, courseId);
-                case "7": removeStudent();
+                case "7": 
+                    // prompt user to input course id ans student id
+                    Scanner rmov = new Scanner(System.in);
+                    System.out.print("\nCourse ID: ");
+                    String rmvCourseId = rmov.nextLine();
+                    System.out.print("Student ID: ");
+                    String rmvStudentId = rmov.nextLine();
+                    removeStudent(rmvCourseId, rmvStudentId);
+                    removeStudent();
             }
         } while(!choice.equals("8"));
     }
