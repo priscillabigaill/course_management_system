@@ -1,0 +1,30 @@
+Introduction to Business Information Systems/BIS101/Monday/09:00 AM/10:30 AM/Dr. Johnson
+Database Management and Design/BIS201/Tuesday/11:00 AM/12:30 PM/Prof. Smith
+Information Systems Analysis and Design/BIS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
+Business Intelligence and Analytics/BIS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
+E-commerce Strategies/BIS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
+Project Management for Information Systems/BIS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Enterprise Systems/BIS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Data Mining for Business/BIS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Business Process Modeling and Simulation/BIS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
+Strategic Information Systems Planning/BIS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Business Analytics/BIS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+IT Governance and Risk Management/BIS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Information Security Management/BIS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Enterprise Architecture/BIS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Data Warehousing and Business Intelligence/BIS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Cloud Computing for Business/BIS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Mobile Application Development/BIS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+IT Strategy and Management/BIS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
+Business Systems Integration/BIS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
+Digital Marketing/BIS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
+Business Process Automation/BIS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
+Supply Chain Management/BIS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
+IT Consulting and Advisory Services/BIS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
+Business Data Analytics/BIS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
+Customer Relationship Management/BIS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
+Business Intelligence Systems/BIS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
+IT Project Portfolio Management/BIS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
+Business Process Reengineering/BIS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
+Business Information Systems Governance/BIS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
+Advanced Topics in Business Information Systems/BIS3001/Friday/03:30 PM/05:00 PM/Dr. Johnson

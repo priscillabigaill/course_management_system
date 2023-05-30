@@ -1,0 +1,30 @@
+Introduction to Programming/CS101/Monday/09:00 AM/10:30 AM/Dr. Smith
+Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
+Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
+Operating Systems/CS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
+Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
+Software Engineering/CS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
+Web Development/CS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
+Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
+Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
+Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
+Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
+Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
+Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
+Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
+Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
+Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
+Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
+Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
+Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
