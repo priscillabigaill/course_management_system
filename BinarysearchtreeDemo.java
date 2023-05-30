@@ -616,7 +616,6 @@ public class BinarysearchtreeDemo {
                     System.out.print("Student ID: ");
                     String rmvStudentId = rmov.nextLine();
                     removeStudent(rmvCourseId, rmvStudentId);
-                    removeStudent();
             }
         } while(!choice.equals("8"));
     }
