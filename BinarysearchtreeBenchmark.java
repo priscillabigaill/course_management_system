@@ -1,3 +1,5 @@
+package coursemanagementsystem;
+
 public class BinarysearchtreeBenchmark {
 
     private static class Course {
@@ -203,9 +205,9 @@ public class BinarysearchtreeBenchmark {
      *  (5) Search Course by Name  *
      *******************************/
 
-    public static void searchCourseByName(String courseName) {
+    public static void searchCoursebyName(String courseName) {
         // Recursively search for the specified course in the tree
-        boolean found = searchCourseByName(root, courseName);
+        boolean found = searchCoursebyName(root, courseName);
 
         // If the course was not found, display a message
         if (!found) {
@@ -214,7 +216,7 @@ public class BinarysearchtreeBenchmark {
 
     // a recursive method that searches for a course by its name
     // returns true if the course is found, and false otherwise
-    private static boolean searchCourseByName(Course node, String courseName) {
+    private static boolean searchCoursebyName(Course node, String courseName) {
         // check if current node is empty
         if (node == null) {
             return false;
@@ -234,8 +236,8 @@ public class BinarysearchtreeBenchmark {
         }
 
         // Recursively search the left and right subtrees
-        boolean foundLeft = searchCourseByName(node.left, courseName);
-        boolean foundRight = searchCourseByName(node.right, courseName);
+        boolean foundLeft = searchCoursebyName(node.left, courseName);
+        boolean foundRight = searchCoursebyName(node.right, courseName);
         return foundLeft || foundRight;
     }
 
