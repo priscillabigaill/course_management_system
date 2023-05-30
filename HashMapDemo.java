@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Hashmap {
+public class HashMapDemo {
     private static HashMap<String, Course> courses = new HashMap<>();
 
     public static void displayMenu() {
@@ -53,22 +53,7 @@ public class Hashmap {
     /**********************
      *   (1) Add Course   *
      **********************/
-    public static void addCourse() {
-        Scanner input = new Scanner(System.in);
-        // prompt for course details
-        System.out.print("\nCourse Name: ");
-        String courseName = input.next();
-        System.out.print("Course Id: ");
-        String courseId = input.next();
-        System.out.print("Day: ");
-        String courseDay = input.next();
-        System.out.print("Start Time: ");
-        String courseStartTime = input.next();
-        System.out.print("End Time: ");
-        String courseEndTime = input.next();
-        System.out.print("Lecturer Name: ");
-        String courseLecturerName = input.next();
-
+    public static void addCourse(String courseName, String courseId, String courseDay, String courseStartTime, String courseEndTime, String courseLecturerName) {
         // create a new course object
         Course newCourse = new Course(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName);
 
@@ -80,11 +65,7 @@ public class Hashmap {
     /***********************
      *  (2) Remove Course  *
      ***********************/
-    public static void removeCourse() {
-        Scanner input = new Scanner(System.in);
-        // prompt for a course to remove
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
+    public static void removeCourse(String courseName) {
 
         if (courses.containsKey(courseName)) {
             courses.remove(courseName);
@@ -97,37 +78,13 @@ public class Hashmap {
     /***********************
      *  (3) Modify Course  *
      ***********************/
-    public static void modifyCourse() {
-        Scanner input = new Scanner(System.in);
-        //prompt for a course to modify
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
+    public static void modifyCourse(String courseName, String day, String startTime, String endTime, String lecturerName) {
         if (!courses.containsKey(courseName)) {
             System.out.println("\n❌No course found with that name!");
             return;
         }
 
         Course currentCourse = courses.get(courseName);
-        //display current course information
-        System.out.println("\nCurrent Course Information: ");
-        System.out.println("Course Name: " + courseName);
-        System.out.println("Course ID: " + currentCourse.courseId);
-        System.out.println("Day: " + currentCourse.courseDay);
-        System.out.println("Start Time: " + currentCourse.courseStartTime);
-        System.out.println("End Time: " + currentCourse.courseEndTime);
-        System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
-
-        //modify course with new information
-        System.out.println("\nEnter new course information: ");
-        System.out.print("Day: ");
-        String day = input.nextLine();
-        System.out.print("Start Time: ");
-        String startTime = input.nextLine();
-        System.out.print("End Time: ");
-        String endTime = input.nextLine();
-        System.out.print("Lecturer Name: ");
-        String lecturerName = input.nextLine();
 
         //update course
         currentCourse.courseDay = day;
@@ -163,12 +120,7 @@ public class Hashmap {
     /*******************************
      *  (5) Search Course by Name  *
      *******************************/
-    public static void searchCoursebyName() {
-        Scanner input = new Scanner(System.in);
-        // prompt for a course to search
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
+    public static void searchCoursebyName(String courseName) {
         // search for the course in the HashMap
         Course course = courses.get(courseName);
 
@@ -201,26 +153,15 @@ public class Hashmap {
     /*********************************
      *  (6) Add Student to a course  *
      *********************************/
-    public static void addStudent() {
+    public static void addStudent(String name, String id, String courseName) {
         //check if the list is empty
         if (courses.isEmpty()) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
-        //prompt for student details
-        System.out.print("\nEnter student name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter student ID: ");
-        String id = scanner.nextLine();
-
         //create a new student object
         Course.Student newStudent = new Course.Student(name, id);
-
-        //prompt for course ID to add the student
-        System.out.print("Enter course name to add the student: ");
-        String courseName = scanner.nextLine();
 
         //find the course with the specified ID
         Course currentCourse = courses.get(courseName);
@@ -238,19 +179,12 @@ public class Hashmap {
     /**************************************
      *  (7) Remove Student from a course  *
      **************************************/
-    public static void removeStudent() {
+    public static void removeStudent(String courseName, String studentId) {
         //check if the map is empty
         if (courses.isEmpty()) {
             System.out.println("\n❌No course available!");
             return;
         }
-
-        Scanner input = new Scanner(System.in);
-        //prompt the course id and student id to be removed
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-        System.out.print("Student ID: ");
-        String studentId = input.nextLine();
 
         //get the course with matching ID
         Course currentCourse = courses.get(courseName);
@@ -282,13 +216,83 @@ public class Hashmap {
             choice = input.nextLine();
 
             switch (choice) {
-                case "1" -> addCourse();
-                case "2" -> removeCourse();
-                case "3" -> modifyCourse();
-                case "4" -> viewCourse();
-                case "5" -> searchCoursebyName();
-                case "6" -> addStudent();
-                case "7" -> removeStudent();
+                case "1":
+                    Scanner add = new Scanner(System.in);
+                    // prompt for course details
+                    System.out.print("\nCourse Name: ");
+                    String courseName = add.nextLine();
+                    System.out.print("Course Id: ");
+                    String courseId = add.nextLine();
+                    System.out.print("Day: ");
+                    String courseDay = add.nextLine();
+                    System.out.print("Start Time: ");
+                    String courseStartTime = add.nextLine();
+                    System.out.print("End Time: ");
+                    String courseEndTime = add.nextLine();
+                    System.out.print("Lecturer Name: ");
+                    String courseLecturerName = add.nextLine();
+                    addCourse(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName);
+                    break;
+                case "2":
+                    Scanner rmv = new Scanner(System.in);
+                    // prompt for a course to remove
+                    System.out.print("\nCourse Name: ");
+                    String courseToRemove = rmv.nextLine();
+                    removeCourse(courseToRemove);
+                    break;
+                case "3":
+                    Scanner modify = new Scanner(System.in);
+                    //prompt for a course to modify
+                    System.out.print("\nCourse Name: ");
+                    String courseToModify = modify.nextLine();
+
+                    if (!courses.containsKey(courseToModify)) {
+                        System.out.println("\n❌No course found with that name!");
+                    } else {
+                        //modify course with new information
+                        System.out.println("\nEnter new course information: ");
+                        System.out.print("Day: ");
+                        String day = modify.nextLine();
+                        System.out.print("Start Time: ");
+                        String startTime = modify.nextLine();
+                        System.out.print("End Time: ");
+                        String endTime = modify.nextLine();
+                        System.out.print("Lecturer Name: ");
+                        String lecturerName = modify.nextLine();
+                        modifyCourse(courseToModify, day, startTime, endTime, lecturerName);
+                    }
+                    break;
+                case "4":
+                    viewCourse();
+                    break;
+                case "5":
+                    Scanner search = new Scanner(System.in);
+                    // prompt for a course to search
+                    System.out.print("\nCourse Name: ");
+                    String courseToSearch = search.nextLine();
+                    searchCoursebyName(courseToSearch);
+                    break;
+                case "6":
+                    Scanner addStudent = new Scanner(System.in);
+                    //prompt for student details
+                    System.out.print("\nEnter student name: ");
+                    String name = addStudent.nextLine();
+                    System.out.print("Enter student ID: ");
+                    String id = addStudent.nextLine();
+                    //prompt for course ID to add the student
+                    System.out.print("Enter course name to add the student: ");
+                    String courseToAddStudent = addStudent.nextLine();
+                    addStudent(name, id, courseToAddStudent);
+                    break;
+                case "7":
+                    Scanner removeStudent = new Scanner(System.in);
+                    //prompt the course id and student id to be removed
+                    System.out.print("\nCourse Name: ");
+                    String courseToRemoveStudent = removeStudent.nextLine();
+                    System.out.print("Student ID: ");
+                    String studentId = removeStudent.nextLine();
+                    removeStudent(courseToRemoveStudent, studentId);
+                    break;
             }
         } while (!choice.equals("8"));
     }
