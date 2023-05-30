@@ -270,7 +270,7 @@ public class HashmapDemo {
                     // prompt for a course to search
                     System.out.print("\nCourse Name: ");
                     String courseToSearch = search.nextLine();
-                    searchCourse(courseToSearch);
+                    searchCoursebyName(courseToSearch);
                     break;
                 case "6":
                     Scanner addStudent = new Scanner(System.in);
