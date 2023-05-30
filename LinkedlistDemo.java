@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LinkedList {
+public class LinkedlistDemo {
     public static void displayMenu() {
         System.out.println("\n🏫Welcome Admin to our course management system!");
         System.out.println("\n******************************");
@@ -63,22 +63,7 @@ public class LinkedList {
     /**********************
      *   (1) Add Course   *
      **********************/
-    public static void addCourse() {
-        Scanner input = new Scanner(System.in);
-        //prompt for course details
-        System.out.print("\nCourse Name: ");
-        String courseName = input.next();
-        System.out.print("Course Id: ");
-        String courseId = input.next();
-        System.out.print("Day: ");
-        String courseDay = input.next();
-        System.out.print("Start Time: ");
-        String courseStartTime = input.next();
-        System.out.print("End Time: ");
-        String courseEndTime = input.next();
-        System.out.print("Lecturer Name: ");
-        String courseLecturerName = input.next();
-        Course.Student studentList = null;
+    public static void addCourse(String courseName, String courseId, String courseDay, String courseStartTime, String courseEndTime, String courseLecturerName, Course.Student studentList) {
 
         //create a new course object
         Course newCourse = new Course(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName, studentList);
@@ -102,21 +87,16 @@ public class LinkedList {
     /***********************
      *  (2) Remove Course  *
      ***********************/
-    public static void removeCourse() {
+    public static void removeCourse(String rmvCourseName) {
         //check if the list is empty
         if (head == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        Scanner input = new Scanner(System.in);
-        //prompt for a course to be removed
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
         //search for the course with the matching name
         Course currentCourse = head;
-        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
+        while (currentCourse != null && !currentCourse.courseName.equals(rmvCourseName)) {
             currentCourse = currentCourse.courseNext;
         }
         //reach the end of the linkedList without finding a matching course name
@@ -141,21 +121,16 @@ public class LinkedList {
     /***********************
      *  (3) Modify Course  *
      ***********************/
-    public static void modifyCourse() {
+    public static void modifyCourse(String modCourseName, String day, String startTime, String endTime, String lecturerName) {
         //check if the list is empty
         if (head == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        Scanner input = new Scanner(System.in);
-        //prompt for a course to be modified
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-
         //search for course with matching name
         Course currentCourse = head;
-        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
+        while (currentCourse != null && !currentCourse.courseName.equals(modCourseName)) {
             currentCourse = currentCourse.courseNext;
         }
         //if the course is not found
@@ -172,17 +147,6 @@ public class LinkedList {
         System.out.println("Start Time: " + currentCourse.courseStartTime);
         System.out.println("End Time: " + currentCourse.courseEndTime);
         System.out.println("Lecturer Name: " + currentCourse.courseLecturerName);
-
-        //modify course with new information
-        System.out.println("\nEnter new course information: ");
-        System.out.print("Day: ");
-        String day = input.nextLine();
-        System.out.print("Start Time: ");
-        String startTime = input.nextLine();
-        System.out.print("End Time: ");
-        String endTime = input.nextLine();
-        System.out.print("Lecturer Name: ");
-        String lecturerName = input.nextLine();
 
         //update course
         currentCourse.courseDay = day;
@@ -219,11 +183,7 @@ public class LinkedList {
     /*******************************
      *  (5) Search Course by Name  *
      *******************************/
-    public static void searchCoursebyName() {
-        Scanner input = new Scanner(System.in);
-        //prompt for a course to search
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
+    public static void searchCoursebyName(String srchCourse) {
 
         Course currentCourse = head;
         boolean found = false;
@@ -231,7 +191,7 @@ public class LinkedList {
         //iterate over the course list to find the specified course
         while (currentCourse != null) {
             //check if the current course matches the specified course name
-            if (currentCourse.courseName.equals(courseName)) {
+            if (currentCourse.courseName.equals(srchCourse)) {
                 System.out.println("\n-Course Details-");
                 System.out.println("Course Name: " + currentCourse.courseName);
                 System.out.println("Course ID: " + currentCourse.courseId);
@@ -266,32 +226,21 @@ public class LinkedList {
     /*********************************
      *  (6) Add Student to a course  *
      *********************************/
-    public static void addStudent() {
+    public static void addStudent(String name, String id, String addTo) {
         //check if the course list is empty
         if (head == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
-        //prompt for student details
-        System.out.print("\nEnter student name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter student ID: ");
-        String id = scanner.nextLine();
-
         //create a new student object
         Course.Student newStudent = new Course.Student(name, id);
-
-        //prompt for course name to add the student
-        System.out.print("Enter course name to add the student: ");
-        String courseName = scanner.nextLine();
 
         Course currentCourse = head;
 
         //iterate over the course list to find the specified course
         while (currentCourse != null) {
-            if (currentCourse.courseName.equals(courseName)) {
+            if (currentCourse.courseName.equals(addTo)) {
                 //if the specified course is found, adding the student to the course
                 if (currentCourse.studentListHead == null) {
                     //if the student list is empty, setting the new student as the head of the list
@@ -318,23 +267,16 @@ public class LinkedList {
     /**************************************
      *  (7) Remove Student from a course  *
      **************************************/
-    public static void removeStudent() {
+    public static void removeStudent(String rmvName, String rmvId) {
         //check if the course list is empty
         if (head == null) {
             System.out.println("\n❌No course available!");
             return;
         }
 
-        Scanner input = new Scanner(System.in);
-        //prompt the course name and student id to be removed
-        System.out.print("\nCourse Name: ");
-        String courseName = input.nextLine();
-        System.out.print("Student ID: ");
-        String studentId = input.nextLine();
-
         //search for course with matching name
         Course currentCourse = head;
-        while (currentCourse != null && !currentCourse.courseName.equals(courseName)) {
+        while (currentCourse != null && !currentCourse.courseName.equals(rmvName)) {
             currentCourse = currentCourse.courseNext;
         }
         if (currentCourse == null) {
@@ -344,7 +286,7 @@ public class LinkedList {
 
         //search for student with matching ID
         Course.Student currentStudent = currentCourse.studentListHead;
-        while (currentStudent != null && !currentStudent.studentId.equals(studentId)) {
+        while (currentStudent != null && !currentStudent.studentId.equals(rmvId)) {
             currentStudent = currentStudent.studentNext;
         }
         if (currentStudent == null) {
@@ -375,13 +317,71 @@ public class LinkedList {
             choice = input.nextLine();
 
             switch (choice) {
-                case "1" -> addCourse();
-                case "2" -> removeCourse();
-                case "3" -> modifyCourse();
-                case "4" -> viewCourse();
-                case "5" -> searchCoursebyName();
-                case "6" -> addStudent();
-                case "7" -> removeStudent();
+                case "1" :
+                    Scanner cAdd = new Scanner(System.in);
+                    //prompt for course details
+                    System.out.print("\nCourse Name: ");
+                    String courseName = cAdd.next();
+                    System.out.print("Course Id: ");
+                    String courseId = cAdd.next();
+                    System.out.print("Day: ");
+                    String courseDay = cAdd.next();
+                    System.out.print("Start Time: ");
+                    String courseStartTime = cAdd.next();
+                    System.out.print("End Time: ");
+                    String courseEndTime = cAdd.next();
+                    System.out.print("Lecturer Name: ");
+                    String courseLecturerName = cAdd.next();
+                    Course.Student studentList = null;
+                    addCourse(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName, studentList);
+                case "2" :
+                    Scanner cRmv = new Scanner(System.in);
+                    //prompt for a course to be removed
+                    System.out.print("\nCourse Name: ");
+                    String rmvCourseName = cRmv.nextLine();
+                    removeCourse(rmvCourseName);
+                case "3" :
+                    Scanner cModify = new Scanner(System.in);
+                    //prompt for a course to be modified
+                    System.out.print("\nCourse Name: ");
+                    String modCourseName = cModify.nextLine();
+                    //modify course with new information
+                    System.out.println("\nEnter new course information: ");
+                    System.out.print("Day: ");
+                    String day = cModify.nextLine();
+                    System.out.print("Start Time: ");
+                    String startTime = cModify.nextLine();
+                    System.out.print("End Time: ");
+                    String endTime = cModify.nextLine();
+                    System.out.print("Lecturer Name: ");
+                    String lecturerName = cModify.nextLine();
+                    modifyCourse(modCourseName, day, startTime, endTime, lecturerName);
+                case "4" : viewCourse();
+                case "5" :
+                    Scanner srchName = new Scanner(System.in);
+                    //prompt for a course to search
+                    System.out.print("\nCourse Name: ");
+                    String srchCourse = srchName.nextLine();
+                    searchCoursebyName(srchCourse);
+                case "6" :
+                    Scanner addStud = new Scanner(System.in);
+                    //prompt for student details
+                    System.out.print("\nEnter student name: ");
+                    String name = addStud.nextLine();
+                    System.out.print("Enter student ID: ");
+                    String id = addStud.nextLine();
+                    //prompt for course name to add the student
+                    System.out.print("Enter course name to add the student: ");
+                    String addTo = addStud.nextLine();
+                    addStudent(name, id, addTo);
+                case "7" :
+                    Scanner rmvStud = new Scanner(System.in);
+                    //prompt the course name and student id to be removed
+                    System.out.print("\nCourse Name: ");
+                    String rmvName = rmvStud.nextLine();
+                    System.out.print("Student ID: ");
+                    String rmvId = rmvStud.nextLine();
+                    removeStudent(rmvName, rmvId);
             }
         } while(!choice.equals("8"));
     }
