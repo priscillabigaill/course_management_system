@@ -1,5 +1,3 @@
-package coursemanagementsystem;
-
 import java.io.BufferedReader;
 import java.text.DecimalFormat;
 import java.io.FileNotFoundException;
