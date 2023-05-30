@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HashMapDemo {
+public class HashmapDemo {
     private static HashMap<String, Course> courses = new HashMap<>();
 
     public static void displayMenu() {
