@@ -1,4 +1,4 @@
-public class BinarysearchtreeBenchmark {
+public class BinarySearchTreeBenchmark {
 
     private static class Course {
         // inner class representing a course
@@ -202,7 +202,6 @@ public class BinarysearchtreeBenchmark {
     /*******************************
      *  (5) Search Course by Name  *
      *******************************/
-
     public static void searchCoursebyName(String courseName) {
         // Recursively search for the specified course in the tree
         boolean found = searchCoursebyName(root, courseName);
