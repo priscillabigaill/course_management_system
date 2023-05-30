@@ -1,5 +1,3 @@
-package coursemanagementsystem;
-
 public class BinarysearchtreeBenchmark {
 
     private static class Course {
