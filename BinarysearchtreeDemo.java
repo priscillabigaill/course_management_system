@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BinarySearchTree {
+public class BinarysearchtreeDemo {
 
     public static void displayMenu() {
         System.out.println("\n🏫 Welcome Admin to our course management system!");
