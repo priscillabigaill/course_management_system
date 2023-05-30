@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HashMapBenchmark {
+public class HashmapBenchmark {
     private static HashMap<String, Course> courses = new HashMap<>();
 
     // create a course node
