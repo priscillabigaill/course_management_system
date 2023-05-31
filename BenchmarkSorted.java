@@ -126,7 +126,7 @@ public class BenchmarkSorted {
              *********************/
             case "2":
                 Scanner read2 = new Scanner(System.in);
-                System.out.println("\nPerformance of different data structures for adding course method");
+                System.out.println("\nPerformance of different data structures for removing course method");
                 System.out.print("Enter a number of courses (n) to be removed to stimulate the speed: ");
                 n = read2.nextInt();
                 //ArrayList
