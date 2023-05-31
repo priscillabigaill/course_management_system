@@ -1,178 +1,190 @@
 import java.io.BufferedReader;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Benchmark {
 
+    // sorting method
+    public static void sortFileData(String filename) {
+        try {
+            // Read the file data into a list
+            ArrayList<String> lines = new ArrayList<>();
+            BufferedReader reader = new BufferedReader(new FileReader(filename));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+            reader.close();
+
+            // Sort the data in alphabetical order
+            Collections.sort(lines);
+
+            // Write the sorted data back to the file
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+            for (String sortedLine : lines) {
+                writer.write(sortedLine);
+                writer.newLine();
+            }
+            writer.close();
+
+            System.out.println("File data sorted successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while sorting the file data: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
+
+        // call sorting method
+        sortFileData("studentData.txt");
+        sortFileData("courseData.txt");
+
         Scanner input = new Scanner(System.in);
         // call readCourse function
         long startTime1, startTime2, startTime3, startTime4, endTime1, endTime2, endTime3, endTime4;
+        int n;
         readCourse();
         ArraylistBenchmark arrayList = new ArraylistBenchmark();
+        for (int i=0; i<150 && i<courseCount; i++) {
+            arrayList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
+        }
         HashmapBenchmark hashMap = new HashmapBenchmark();
+        for (int i=0; i<150 && i<courseCount; i++) {
+            hashMap.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
+        }
         BinarysearchtreeBenchmark binarySearchTree = new BinarysearchtreeBenchmark();
+        for (int i=0; i<150 && i<courseCount; i++) {
+            binarySearchTree.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
+        }
         LinkedlistBenchmark linkedList = new LinkedlistBenchmark();
+        for (int i=0; i<150 && i<courseCount; i++) {
+            linkedList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i], null);
+        }
 
-        System.out.print("Enter a number of courses to stimulate the speed (10/20/30): ");
+
+
+        System.out.println("Choose the method that you want to test:");
+        System.out.println("1 - Add course");
+        System.out.println("2 - Remove course");
+        System.out.println("3 - Edit course");
+        System.out.println("4 - Search course by name");
+        System.out.println("5 - Add student to a course");
+        System.out.println("6 - Remove student from a course");
+        System.out.print("Enter your choice: ");
         String choice = input.nextLine();
 
         switch (choice) {
-
-            case "10":
-                //add course
+            /**
+             * 1 - Add course
+             */
+            case "1":
+                Scanner read1 = new Scanner(System.in);
+                System.out.println("Performance of different data structures for adding and removing course method");
+                System.out.print("Enter a number of courses (n) to be added to stimulate the speed: ");
+                n = read1.nextInt();
                 //ArrayList
                 System.out.print("ArrayList: ");
+                System.out.print("Adding course: ");
                 startTime1 = System.nanoTime();
-                for (int i=0; i<10 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     arrayList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<5 && i<courseCount; i++) {
-                    arrayList.removeCourse(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    arrayList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    arrayList.searchCoursebyName(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    arrayList.addStudent(studentName[i], studentId[i], courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        arrayList.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<5 && s<studentCount; s++) {
-                        arrayList.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime1 = System.nanoTime();
                 getTime(startTime1, endTime1);
 
                 //Hashmap
                 System.out.print("Hash Map: ");
+                System.out.print("Adding course: ");
                 startTime2 = System.nanoTime();
-                for (int i=0; i<10 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     hashMap.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<5 && i<courseCount; i++) {
-                    hashMap.removeCourse(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    hashMap.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    hashMap.searchCoursebyName(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    hashMap.addStudent(studentName[i], studentId[i], courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        hashMap.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<5 && s<studentCount; s++) {
-                        hashMap.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime2 = System.nanoTime();
                 getTime(startTime2, endTime2);
 
                 //Binary Search Tree
                 System.out.print("Binary Search Tree: ");
+                System.out.print("Adding course: ");
                 startTime3 = System.nanoTime();
-                for (int i=0; i<10 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     binarySearchTree.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<5 && i<courseCount; i++) {
-                    binarySearchTree.removeCourse(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    binarySearchTree.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    binarySearchTree.searchCoursebyName(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    binarySearchTree.addStudent(studentName[i], studentId[i], courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        binarySearchTree.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<5 && s<studentCount; s++) {
-                        binarySearchTree.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime3 = System.nanoTime();
                 getTime(startTime3, endTime3);
 
                 //Linked list
                 System.out.print("LinkedList: ");
+                System.out.print("Adding course: ");
                 startTime4 = System.nanoTime();
-                for (int i=0; i<10 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     linkedList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i], null);
                 }
-                for (int i=0; i<5 && i<courseCount; i++) {
+                endTime4 = System.nanoTime();
+                getTime(startTime4, endTime4);
+                break;
+
+            /**
+             * 2 - Remove Course
+             */
+            case "2":
+                Scanner read2 = new Scanner(System.in);
+                System.out.print("Enter a number of courses (n) to be removed to stimulate the speed: ");
+                n = read2.nextInt();
+                //ArrayList
+                System.out.print("Removing course: ");
+                startTime1 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    arrayList.removeCourse(courseName[i]);
+                }
+                endTime1 = System.nanoTime();
+                getTime(startTime1, endTime1);
+
+                //HashMap
+                System.out.print("Removing course: ");
+                startTime2 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    hashMap.removeCourse(courseName[i]);
+                }
+                endTime2 = System.nanoTime();
+                getTime(startTime2, endTime2);
+
+                //Binary Search Tree
+                System.out.print("Removing course: ");
+                startTime3 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    binarySearchTree.removeCourse(courseName[i]);
+                }
+                endTime3 = System.nanoTime();
+                getTime(startTime3, endTime3);
+
+                //Linked List
+                System.out.print("Removing course: ");
+                startTime4 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
                     linkedList.removeCourse(courseName[i]);
                 }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    linkedList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    linkedList.searchCoursebyName(courseName[i]);
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        linkedList.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=5; i<10 && i<courseCount; i++) {
-                    for (int s=0; s<5 && s<studentCount; s++){
-                        linkedList.removeStudent(courseName[i], studentId[s]);
-                    }
-                }
-
                 endTime4 = System.nanoTime();
                 getTime(startTime4, endTime4);
 
-                break;
-            case "20":
-                //add course
+                /**
+                 * 3 - Modify course
+                 */
+            case "3":
+                Scanner read3 = new Scanner(System.in);
+                System.out.print("Enter a number of courses (n) to be modified to stimulate the speed: ");
+                n = read3.nextInt();
                 //ArrayList
                 System.out.print("ArrayList: ");
+                ;
                 startTime1 = System.nanoTime();
-                for (int i=0; i<20 && i<courseCount; i++) {
-                    arrayList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<10 && i<courseCount; i++) {
-                    arrayList.removeCourse(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     arrayList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    arrayList.searchCoursebyName(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<20 && s<studentCount; s++){
-                        arrayList.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++) {
-                        arrayList.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime1 = System.nanoTime();
                 getTime(startTime1, endTime1);
@@ -180,27 +192,8 @@ public class Benchmark {
                 //Hashmap
                 System.out.print("Hash Map: ");
                 startTime2 = System.nanoTime();
-                for (int i=0; i<20 && i<courseCount; i++) {
-                    hashMap.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<10 && i<courseCount; i++) {
-                    hashMap.removeCourse(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     hashMap.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    hashMap.searchCoursebyName(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<20 && s<studentCount; s++){
-                        hashMap.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++) {
-                        hashMap.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime2 = System.nanoTime();
                 getTime(startTime2, endTime2);
@@ -208,27 +201,53 @@ public class Benchmark {
                 //Binary Search Tree
                 System.out.print("Binary Search Tree: ");
                 startTime3 = System.nanoTime();
-                for (int i=0; i<20 && i<courseCount; i++) {
-                    binarySearchTree.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
-                }
-                for (int i=0; i<10 && i<courseCount; i++) {
-                    binarySearchTree.removeCourse(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     binarySearchTree.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
                 }
-                for (int i=10; i<20 && i<courseCount; i++) {
+                endTime3 = System.nanoTime();
+                getTime(startTime3, endTime3);
+
+                //Linked list
+                System.out.print("LinkedList: ");
+                startTime4 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    linkedList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
+                }
+                endTime4 = System.nanoTime();
+                getTime(startTime4, endTime4);
+                break;
+
+            /**
+             * Search course
+             */
+            case "4":
+                Scanner read4 = new Scanner(System.in);
+                System.out.print("Enter a number of courses (n) to be searched to stimulate the speed: ");
+                n = read4.nextInt();
+
+                //Array List
+                System.out.print("ArrayList: ");
+                startTime1 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    arrayList.searchCoursebyName(courseName[i]);
+                }
+                endTime1 = System.nanoTime();
+                getTime(startTime1, endTime1);
+
+                //Hashmap
+                System.out.print("Hash Map: ");
+                startTime2 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
+                    hashMap.searchCoursebyName(courseName[i]);
+                }
+                endTime2 = System.nanoTime();
+                getTime(startTime2, endTime2);
+
+                //Binary Search Tree
+                System.out.print("Binary Search Tree: ");
+                startTime3 = System.nanoTime();
+                for (int i = 0; i < n && i < courseCount; i++) {
                     binarySearchTree.searchCoursebyName(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<20 && s<studentCount; s++) {
-                        binarySearchTree.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        binarySearchTree.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime3 = System.nanoTime();
                 getTime(startTime3, endTime3);
@@ -236,32 +255,33 @@ public class Benchmark {
                 //Linked list
                 System.out.print("LinkedList: ");
                 startTime4 = System.nanoTime();
-                for (int i=0; i<20 && i<courseCount; i++) {
-                    linkedList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i], null);
-                }
-                for (int i=0; i<10 && i<courseCount; i++) {
-                    linkedList.removeCourse(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    linkedList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
+                for (int i = 0; i < n && i < courseCount; i++) {
                     linkedList.searchCoursebyName(courseName[i]);
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<20 && s<studentCount; s++) {
-                        linkedList.addStudent(studentName[s], studentId[s], courseName[i]);
-                    }
-                }
-                for (int i=10; i<20 && i<courseCount; i++) {
-                    for (int s=0; s<10 && s<studentCount; s++){
-                        linkedList.removeStudent(courseName[i], studentId[s]);
-                    }
                 }
                 endTime4 = System.nanoTime();
                 getTime(startTime4, endTime4);
 
                 break;
+
+            /**
+             * 5 - Add student
+             */
+            case "5":
+                Scanner read5 = new Scanner(System.in);
+                System.out.print("Enter a number of courses (n) to be modified to stimulate the speed: ");
+                n = read5.nextInt();
+                //ArrayList
+                System.out.print("ArrayList: ");
+                startTime1 = System.nanoTime();
+                for (int i = 0; i < arrayList.size(); i++) {
+                    for (int s=0; s<n && s<studentCount; s++){
+                        arrayList.addStudent(studentName[s], studentId[s], courseName[i]);
+                    }
+                }
+                endTime1 = System.nanoTime();
+                getTime(startTime1, endTime1);
+
+
             case "30":
                 //add course
                 //ArrayList
@@ -382,7 +402,7 @@ public class Benchmark {
 
     static void getTime(long startTime, long endTime) {
         double elapsedTime = (endTime - startTime) / 1_000.0;  //milliseconds
-        System.out.println("\nTime used: " + elapsedTime + " milisecond(s)");
+        System.out.println("Time used: " + elapsedTime + " milisecond(s)");
         // System.out.printf("\nTime used: %.2f milliseconds", elapsedTime);
     }
 
