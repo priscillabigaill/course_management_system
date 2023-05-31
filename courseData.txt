@@ -1,150 +1,150 @@
-Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
-Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
-Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
-Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
-Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
-Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
-Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
-Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
-Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
-Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
-Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
-Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
-Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
-Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
-Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
-Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
-Community Health Nursing/NUR1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
-Community Health Nursing/NUR701/Tuesday/09:30 AM/11:00 AM/Dr. Anderson
-Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
-Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
-Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
-Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
-Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
-Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
-Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
-Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
-Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
-Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
-Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
-Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
-Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
-Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
-Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
-Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
-Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
-Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
-Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
-Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
-Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
-Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
-Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
-Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
-Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
-Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
-Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
-Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
-Critical Care Nursing/NUR1001/Friday/10:30 AM/12:00 PM/Dr. Patel
-Critical Care Nursing/NUR2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
-Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
-Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
-Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
-Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
-Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
-Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
-Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
-Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
-Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
-Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
-Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
-Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
-Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
-Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
-Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
-Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
-Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
-Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
-Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
-Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
-Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
-Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
-Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
-Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
-Ethics in Nursing/NUR1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
-Geriatric Nursing/NUR2001/Friday/11:30 AM/01:00 PM/Dr. Ward
-Geriatric Nursing/NUR2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
-Geriatric Nursing/NUR801/Wednesday/11:30 AM/01:00 PM/Prof. Garcia
-Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
-Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
-Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
-Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
-Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
-Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
-Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
-Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
 Introduction to Programming/CS101/Monday/09:00 AM/10:30 AM/Dr. Smith
-Introduction to Programming/CS101/Monday/09:00 AM/10:30 AM/Dr. Smith
-Introduction to Programming/CS101/Monday/09:00 AM/10:30 AM/Dr. Smith
-Introduction to Programming/CS101/Monday/09:00 AM/10:30 AM/Dr. Smith
-Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
-Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
-Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
-Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
-Maternity Nursing/NUR2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
-Maternity Nursing/NUR601/Monday/03:00 PM/04:30 PM/Prof. Johnson
-Medical-Surgical Nursing/NUR201/Tuesday/11:00 AM/12:30 PM/Dr. Davis
-Medical-Surgical Nursing/NUR2601/Monday/11:00 AM/12:30 PM/Dr. Allen
-Mental Health Nursing/NUR2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
-Mental Health Nursing/NUR501/Friday/01:00 PM/02:30 PM/Dr. Roberts
-Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
-Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
-Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
-Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
-Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
-Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
-Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
-Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
-Nursing Education/NUR1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
-Nursing Fundamentals/NUR101/Monday/09:00 AM/10:30 AM/Prof. Adams
-Nursing Fundamentals/NUR2501/Friday/09:00 AM/10:30 AM/Prof. Clark
-Nursing Informatics/NUR1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
-Nursing Informatics/NUR1501/Friday/02:00 PM/03:30 PM/Prof. Martin
-Nursing Informatics/NUR3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
-Nursing Leadership and Management/NUR1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
-Nursing Leadership and Management/NUR1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
-Nursing Research/NUR1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
-Nursing Research/NUR901/Thursday/02:30 PM/04:00 PM/Dr. Lee
+Data Structures and Algorithms/CS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
+Database Management Systems/CS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
 Operating Systems/CS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
-Operating Systems/CS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
-Operating Systems/CS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
-Operating Systems/CS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
-Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
-Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
-Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
-Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
-Pediatric Nursing/NUR2101/Monday/01:30 PM/03:00 PM/Prof. Turner
-Pediatric Nursing/NUR2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
-Pediatric Nursing/NUR401/Thursday/10:00 AM/11:30 AM/Dr. Thompson
-Pharmacology for Nurses/NUR2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
-Pharmacology for Nurses/NUR301/Wednesday/02:00 PM/03:30 PM/Prof. Wilson
-Psychiatric Nursing/NUR1601/Monday/10:30 AM/12:00 PM/Dr. Scott
-Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
-Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
-Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
-Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
+Computer Networks/CS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
 Software Engineering/CS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
-Software Engineering/CS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
-Software Engineering/CS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
-Software Engineering/CS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
-Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
-Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
-Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
-Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
-Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
-Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
-Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
-Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Artificial Intelligence/CS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Machine Learning/CS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Computer Vision/CS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
 Web Development/CS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
-Web Development/CS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
-Web Development/CS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
-Web Development/CS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Cryptography/CS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Computer Graphics/CS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Information Retrieval/CS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Mobile App Development/CS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Computer Architecture/CS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Software Testing/CS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Data Mining/CS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+Natural Language Processing/CS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
+Cybersecurity/CS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
+Cloud Computing/CS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
+Parallel and Distributed Computing/CS2101/Monday/01:30 PM/03:00 PM/Prof. Turner
+Human-Computer Interaction/CS2201/Tuesday/02:00 PM/03:30 PM/Dr. Roberts
+Big Data Analytics/CS2301/Wednesday/03:00 PM/04:30 PM/Prof. Wilson
+Computer Ethics/CS2401/Thursday/10:00 AM/11:30 AM/Dr. Garcia
+Robotics/CS2501/Friday/09:00 AM/10:30 AM/Prof. Clark
+Data Visualization/CS2601/Monday/11:00 AM/12:30 PM/Dr. Allen
+Software Project Management/CS2701/Tuesday/02:30 PM/04:00 PM/Prof. Davis
+Computer Forensics/CS2801/Wednesday/10:30 AM/12:00 PM/Dr. Smith
+Artificial Neural Networks/CS2901/Thursday/01:00 PM/02:30 PM/Prof. Thompson
+Computer Ethics and Society/CS3001/Friday/03:00 PM/04:30 PM/Dr. Johnson
+Software Development Fundamentals/CS3101/Monday/09:00 AM/10:30 AM/Dr. Roberts
+Cybersecurity Fundamentals/CS3201/Tuesday/11:00 AM/12:30 PM/Prof. Martinez
+Cloud Computing Architecture/CS3301/Wednesday/02:00 PM/03:30 PM/Dr. Wilson
+Data Science and Analytics/CS3401/Thursday/10:00 AM/11:30 AM/Dr. Davis
+Web Design and Development/CS3501/Friday/01:00 PM/02:30 PM/Prof. Johnson
+Mobile Application Security/CS3601/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Artificial Intelligence and Robotics/CS3701/Tuesday/09:30 AM/11:00 AM/Prof. Lee
+Machine Learning Applications/CS3801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Natural Language Processing and Understanding/CS3901/Thursday/02:30 PM/04:00 PM/Dr. Hill
+Computer Vision and Image Processing/CS4001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Quantum Computing/CS4101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Robotics Engineering/CS4201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Cloud Infrastructure Management/CS4301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Software Quality Assurance/CS4401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Cybersecurity Governance and Risk Management/CS4501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Natural Language Generation/CS4601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Big Data Management/CS4701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+Internet of Things (IoT) Development/CS4801/Wednesday/01:00 PM/02:30 PM/Dr. Baker
+Blockchain Technology/CS4901/Thursday/09:30 AM/11:00 AM/Dr. Ward
+High-Performance Computing/CS5001/Friday/11:30 AM/01:00 PM/Prof. Turner
+Introduction to Business Management/BUS101/Monday/09:00 AM/10:30 AM/Dr. Smith
+Principles of Marketing/BUS201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
+Financial Accounting/BUS301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
+Business Law/BUS401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
+Organizational Behavior/BUS501/Friday/01:00 PM/02:30 PM/Prof. Thompson
+Entrepreneurship and Innovation/BUS601/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Business Analytics/BUS701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Operations Management/BUS801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Strategic Management/BUS901/Thursday/02:30 PM/04:00 PM/Prof. Lee
+International Business/BUS1001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Human Resource Management/BUS1101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Managerial Economics/BUS1201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Business Ethics/BUS1301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Supply Chain Management/BUS1401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Financial Management/BUS1501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Marketing Research/BUS1601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Business Communication/BUS1701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+E-commerce Strategies/BUS1801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
+Corporate Finance/BUS1901/Thursday/09:30 AM/11:00 AM/Prof. Baker
+Business Negotiation/BUS2001/Friday/11:30 AM/01:00 PM/Dr. Ward
+Natural Language Understanding/CS5101/Monday/09:00 AM/10:30 AM/Dr. Rodriguez
+Computer Systems Security/CS5201/Tuesday/11:00 AM/12:30 PM/Prof. Martinez
+Cloud Data Management/CS5301/Wednesday/02:00 PM/03:30 PM/Dr. Sullivan
+Deep Learning/CS5401/Thursday/10:00 AM/11:30 AM/Dr. Carter
+Front-End Web Development/CS5501/Friday/01:00 PM/02:30 PM/Prof. Thompson
+Software Testing and Verification/CS5601/Monday/03:00 PM/04:30 PM/Dr. Baker
+Reinforcement Learning/CS5701/Tuesday/09:30 AM/11:00 AM/Prof. Murphy
+Data Mining Techniques/CS5801/Wednesday/11:30 AM/01:00 PM/Dr. Reed
+Computer Graphics and Animation/CS5901/Thursday/02:30 PM/04:00 PM/Dr. Richardson
+Full-Stack Web Development/CS6001/Friday/10:30 AM/12:00 PM/Dr. Thompson
+Information Security/CS6101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Intelligent Robotics/CS6201/Tuesday/01:30 PM/03:00 PM/Dr. Garcia
+Cloud Application Development/CS6301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Software Project Planning and Management/CS6401/Thursday/11:00 AM/12:30 PM/Dr. Phillips
+Cryptocurrency and Blockchain Security/CS6501/Friday/02:00 PM/03:30 PM/Dr. Mitchell
+Sentiment Analysis/CS6601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Network Security/CS6701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+Computer Vision Applications/CS6801/Wednesday/01:00 PM/02:30 PM/Dr. Patel
+Cloud Computing Technologies/CS6901/Thursday/09:30 AM/11:00 AM/Dr. Ward
+High-Performance Data Analytics/CS7001/Friday/11:30 AM/01:00 PM/Prof. Turner
+Business Strategy/BUS2101/Monday/09:00 AM/10:30 AM/Dr. Smith
+Consumer Behavior/BUS2201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
+Managerial Accounting/BUS2301/Wednesday/02:00 PM/03:30 PM/Dr. Davis
+International Business Law/BUS2401/Thursday/10:00 AM/11:30 AM/Dr. Wilson
+Digital Marketing/BUS2501/Friday/01:00 PM/02:30 PM/Prof. Thompson
+Social Entrepreneurship/BUS2601/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Business Intelligence/BUS2701/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Supply Chain Analytics/BUS2801/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Corporate Governance/BUS2901/Thursday/02:30 PM/04:00 PM/Prof. Lee
+E-commerce Strategy and Innovation/BUS3001/Friday/10:30 AM/12:00 PM/Dr. Patel
+Business Process Management/BUS3101/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Negotiation and Conflict Resolution/BUS3201/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Business Analytics for Decision-Making/BUS3301/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Financial Risk Management/BUS3401/Thursday/11:00 AM/12:30 PM/Dr. Mitchell
+Corporate Finance Strategy/BUS3501/Friday/02:00 PM/03:30 PM/Prof. Martin
+Marketing Analytics/BUS3601/Monday/10:30 AM/12:00 PM/Dr. Scott
+Operations Research/BUS3701/Tuesday/03:30 PM/05:00 PM/Prof. Reed
+Strategic Human Resource Management/BUS3801/Wednesday/01:00 PM/02:30 PM/Dr. Hill
+Financial Modeling and Forecasting/BUS3901/Thursday/09:30 AM/11:00 AM/Prof. Baker
+Corporate Social Responsibility/BUS4001/Friday/11:30 AM/01:00 PM/Dr. Ward
+Calculus I/MATH101/Monday/09:00 AM/10:30 AM/Prof. Johnson
+Linear Algebra/MATH201/Tuesday/11:00 AM/12:30 PM/Dr. Davis
+Probability and Statistics/MATH301/Wednesday/02:00 PM/03:30 PM/Prof. Wilson
+Discrete Mathematics/MATH401/Thursday/10:00 AM/11:30 AM/Dr. Anderson
+Number Theory/MATH501/Friday/01:00 PM/02:30 PM/Dr. Thompson
+Differential Equations/MATH601/Monday/03:00 PM/04:30 PM/Prof. Roberts
+Complex Analysis/MATH701/Tuesday/09:30 AM/11:00 AM/Dr. Garcia
+Mathematical Logic/MATH801/Wednesday/11:30 AM/01:00 PM/Prof. Lee
+Mathematical Modeling/MATH901/Thursday/02:30 PM/04:00 PM/Dr. Patel
+Graph Theory/MATH1001/Friday/10:30 AM/12:00 PM/Prof. Nguyen
+Numerical Analysis/MATH1101/Monday/02:00 PM/03:30 PM/Dr. Lopez
+Topology/MATH1201/Tuesday/01:30 PM/03:00 PM/Dr. Kim
+Abstract Algebra/MATH1301/Wednesday/09:00 AM/10:30 AM/Prof. Martin
+Mathematical Optimization/MATH1401/Thursday/11:00 AM/12:30 PM/Dr. Scott
+Mathematical Physics/MATH1501/Friday/02:00 PM/03:30 PM/Prof. Reed
+Combinatorics/MATH1601/Monday/10:30 AM/12:00 PM/Dr. Hill
+Mathematical Statistics/MATH1701/Tuesday/03:30 PM/05:00 PM/Prof. Baker
+Differential Geometry/MATH1801/Wednesday/01:00 PM/02:30 PM/Dr. Ward
+Cryptography and Number Theory/MATH1901/Thursday/09:30 AM/11:00 AM/Dr. Johnson
+Game Theory/MATH2001/Friday/11:30 AM/01:00 PM/Prof. Davis
+General Chemistry/CHEM101/Monday/09:00 AM/10:30 AM/Dr. Smith
+Organic Chemistry/CHEM201/Tuesday/11:00 AM/12:30 PM/Prof. Johnson
+Physics I/PHYS101/Wednesday/02:00 PM/03:30 PM/Dr. Davis
+Environmental Science/ENVS101/Thursday/10:00 AM/11:30 AM/Dr. Wilson
+Biology/BIO101/Friday/01:00 PM/02:30 PM/Dr. Thompson
+Genetics/BIO201/Monday/03:00 PM/04:30 PM/Dr. Anderson
+Microbiology/BIO301/Tuesday/09:30 AM/11:00 AM/Prof. Roberts
+Molecular Biology/BIO401/Wednesday/11:30 AM/01:00 PM/Dr. Garcia
+Ecology and Evolution/BIO501/Thursday/02:30 PM/04:00 PM/Dr. Lee
+Anatomy and Physiology/BIO601/Friday/10:30 AM/12:00 PM/Dr. Patel
+Biochemistry/BIO701/Monday/02:00 PM/03:30 PM/Prof. Nguyen
+Biotechnology/BIO801/Tuesday/01:30 PM/03:00 PM/Dr. Lopez
+Neurobiology/BIO901/Wednesday/09:00 AM/10:30 AM/Prof. Kim
+Cell Biology/BIO1001/Thursday/11:00 AM/12:30 PM/Dr. Martin
+Immunology/BIO1101/Friday/02:00 PM/03:30 PM/Prof. Scott
+Biophysics/BIO1201/Monday/10:30 AM/12:00 PM/Dr. Reed
+Marine Biology/BIO1301/Tuesday/03:30 PM/05:00 PM/Prof. Hill
+Plant Biology/BIO1401/Wednesday/01:00 PM/02:30 PM/Dr. Baker
+Astrobiology/BIO1501/Thursday/09:30 AM/11:00 AM/Dr. Ward
+Paleontology/BIO1601/Friday/11:30 AM/01:00 PM/Prof. Turner
