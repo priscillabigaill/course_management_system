@@ -1,4 +1,4 @@
-public class BinarySearchTreeBenchmark {
+public class BinarysearchtreeBenchmark {
 
     private static class Course {
         // inner class representing a course
