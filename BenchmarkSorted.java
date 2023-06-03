@@ -75,7 +75,6 @@ public class BenchmarkSorted {
              * 1 - Add course *
              ******************/
             case "1":
-
                 Scanner read1 = new Scanner(System.in);
                 System.out.println("\nPerformance of different data structures for adding course method");
                 System.out.print("Enter a number of courses (n) to be added to stimulate the speed: ");
@@ -84,7 +83,7 @@ public class BenchmarkSorted {
                 System.out.println("\nArrayList: ");
                 System.out.print("Adding course: ");
                 startTime1 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     arrayList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
                 }
                 endTime1 = System.nanoTime();
@@ -94,7 +93,7 @@ public class BenchmarkSorted {
                 System.out.println("\nHash Map: ");
                 System.out.print("Adding course: ");
                 startTime2 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     hashMap.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
                 }
                 endTime2 = System.nanoTime();
@@ -104,7 +103,7 @@ public class BenchmarkSorted {
                 System.out.println("\nBinary Search Tree: ");
                 System.out.print("Adding course: ");
                 startTime3 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     binarySearchTree.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i]);
                 }
                 endTime3 = System.nanoTime();
@@ -114,7 +113,7 @@ public class BenchmarkSorted {
                 System.out.println("\nLinkedList: ");
                 System.out.print("Adding course: ");
                 startTime4 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     linkedList.addCourse(courseName[i], courseId[i], courseDay[i], courseStartTime[i], courseEndTime[i], lecturerName[i], null);
                 }
                 endTime4 = System.nanoTime();
@@ -133,7 +132,7 @@ public class BenchmarkSorted {
                 System.out.println("\nArrayList: ");
                 System.out.print("Removing course: ");
                 startTime1 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     arrayList.removeCourse(courseName[i]);
                 }
                 endTime1 = System.nanoTime();
@@ -143,7 +142,7 @@ public class BenchmarkSorted {
                 System.out.println("\nHash Map: ");
                 System.out.print("Removing course: ");
                 startTime2 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     hashMap.removeCourse(courseName[i]);
                 }
                 endTime2 = System.nanoTime();
@@ -153,7 +152,7 @@ public class BenchmarkSorted {
                 System.out.println("\nBinary Search Tree: ");
                 System.out.print("Removing course: ");
                 startTime3 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     binarySearchTree.removeCourse(courseName[i]);
                 }
                 endTime3 = System.nanoTime();
@@ -163,7 +162,7 @@ public class BenchmarkSorted {
                 System.out.println("\nLinked List: ");
                 System.out.print("Removing course: ");
                 startTime4 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     linkedList.removeCourse(courseName[i]);
                 }
                 endTime4 = System.nanoTime();
@@ -182,7 +181,7 @@ public class BenchmarkSorted {
                 System.out.println("\nArrayList: ");
                 System.out.print("Modifying course: ");
                 startTime1 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     arrayList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
                 }
                 endTime1 = System.nanoTime();
@@ -192,7 +191,7 @@ public class BenchmarkSorted {
                 System.out.println("\nHash Map: ");
                 System.out.print("Modifying course: ");
                 startTime2 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     hashMap.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Auber");
                 }
                 endTime2 = System.nanoTime();
@@ -202,7 +201,7 @@ public class BenchmarkSorted {
                 System.out.println("\nBinary Search Tree: ");
                 System.out.print("Modifying course: ");
                 startTime3 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     binarySearchTree.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
                 }
                 endTime3 = System.nanoTime();
@@ -212,7 +211,7 @@ public class BenchmarkSorted {
                 System.out.println("\nLinkedList: ");
                 System.out.print("Modifying course: ");
                 startTime4 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
+                for (int i = 0; i < n && n <= courseCount; i++) {
                     linkedList.modifyCourse(courseName[i], "Thursday", "12.00", "14.00", "Aubert");
                 }
                 endTime4 = System.nanoTime();
@@ -225,16 +224,12 @@ public class BenchmarkSorted {
             case "4":
                 Scanner read4 = new Scanner(System.in);
                 System.out.println("\nPerformance of different data structures for searching course method");
-                System.out.print("Enter a number of courses (n) to be searched to stimulate the speed: ");
-                n = read4.nextInt();
 
                 //Array List
                 System.out.println("\nArrayList: ");
                 System.out.print("Searching course: ");
                 startTime1 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
-                    arrayList.searchCoursebyName(courseName[i]);
-                }
+                arrayList.searchCoursebyName("Topology");
                 endTime1 = System.nanoTime();
                 getTime(startTime1, endTime1);
 
@@ -242,9 +237,7 @@ public class BenchmarkSorted {
                 System.out.println("\nHash Map: ");
                 System.out.print("Searching course: ");
                 startTime2 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
-                    hashMap.searchCoursebyName(courseName[i]);
-                }
+                hashMap.searchCoursebyName("Topology");
                 endTime2 = System.nanoTime();
                 getTime(startTime2, endTime2);
 
@@ -252,9 +245,7 @@ public class BenchmarkSorted {
                 System.out.println("\nBinary Search Tree: ");
                 System.out.print("Searching course: ");
                 startTime3 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
-                    binarySearchTree.searchCoursebyName(courseName[i]);
-                }
+                binarySearchTree.searchCoursebyName("Topology");
                 endTime3 = System.nanoTime();
                 getTime(startTime3, endTime3);
 
@@ -262,9 +253,7 @@ public class BenchmarkSorted {
                 System.out.println("\nLinkedList: ");
                 System.out.print("Searching course: ");
                 startTime4 = System.nanoTime();
-                for (int i = 0; i < n && i < courseCount; i++) {
-                    linkedList.searchCoursebyName(courseName[i]);
-                }
+                linkedList.searchCoursebyName("Topology");
                 endTime4 = System.nanoTime();
                 getTime(startTime4, endTime4);
 
@@ -283,7 +272,7 @@ public class BenchmarkSorted {
                 System.out.print("Adding students to course: ");
                 startTime1 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         arrayList.addStudent(studentName[s], studentId[s], courseName[i]);
                     }
                 }
@@ -295,7 +284,7 @@ public class BenchmarkSorted {
                 System.out.print("Adding students to course: ");
                 startTime2 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         hashMap.addStudent(studentName[s], studentId[s], courseName[i]);
                     }
                 }
@@ -307,7 +296,7 @@ public class BenchmarkSorted {
                 System.out.print("Adding students to course: ");
                 startTime3 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         binarySearchTree.addStudent(studentName[s], studentId[s], courseName[i]);
                     }
                 }
@@ -319,7 +308,7 @@ public class BenchmarkSorted {
                 System.out.print("Adding students to course: ");
                 startTime4 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         linkedList.addStudent(studentName[s], studentId[s], courseName[i]);
                     }
                 }
@@ -341,7 +330,7 @@ public class BenchmarkSorted {
                 System.out.print("Removing students to course: ");
                 startTime1 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         arrayList.removeStudent(courseName[i], studentId[s]);
                     }
                 }
@@ -353,7 +342,7 @@ public class BenchmarkSorted {
                 System.out.print("Removing students to course: ");
                 startTime2 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         hashMap.removeStudent(courseName[i], studentId[s]);
                     }
                 }
@@ -365,7 +354,7 @@ public class BenchmarkSorted {
                 System.out.print("Removing students to course: ");
                 startTime3 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         binarySearchTree.removeStudent(courseName[i], studentId[s]);
                     }
                 }
@@ -377,7 +366,7 @@ public class BenchmarkSorted {
                 System.out.print("Removing students to course: ");
                 startTime4 = System.nanoTime();
                 for (int i=0; i<courseCount; i++) {
-                    for (int s=0; s<n && s<studentCount; s++){
+                    for (int s=0; s<n && n<=studentCount; s++){
                         linkedList.removeStudent(courseName[i], studentId[s]);
                     }
                 }
@@ -404,39 +393,30 @@ public class BenchmarkSorted {
     // Counter variable to keep track of the number of users
     private static int courseCount = 0;
 
-    public static void readCourse(){
+    public static void readCourse() {
         try {
-            String fileName = "courseData.txt";
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
-
+            BufferedReader reader = new BufferedReader(new FileReader("courseData.txt"));
             String line;
-            // Read each line of the file until reaching the end (null)
-            while ((line = br.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("/");
-                if (parts.length >= 8) {
-                    String name = parts[0];
-                    String id = parts[1];
-                    String day = parts[2];
-                    String start = parts[3];
-                    String end = parts[4];
-                    String lname = parts[5];
+                String name = parts[0];
+                String id = parts[1];
+                String day = parts[2];
+                String start = parts[3];
+                String end = parts[4];
+                String lname = parts[5];
 
-                    courseName[courseCount] = name;
-                    courseId[courseCount] = id;
-                    courseDay[courseCount] = day;
-                    courseStartTime[courseCount] = start;
-                    courseEndTime[courseCount] = end;
-                    lecturerName[courseCount] = lname;
-                    courseCount++;
-                }
+                courseName[courseCount] = name;
+                courseId[courseCount] = id;
+                courseDay[courseCount] = day;
+                courseStartTime[courseCount] = start;
+                courseEndTime[courseCount] = end;
+                lecturerName[courseCount] = lname;
+                courseCount++;
             }
-            // Handle the case where the file is not found
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found.");
-            // Handle the case where there is an error reading the file
+            reader.close();
         } catch (IOException e) {
-            System.out.println("Error reading the file.");
+            System.out.println("File not found.");
         }
     }
 
@@ -448,31 +428,22 @@ public class BenchmarkSorted {
     // Counter variable to keep track of the number of users
     private static int studentCount = 0;
 
-    public static void readStudent(){
+    public static void readStudent() {
         try {
-            String fileName = "studentData.txt";
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
-
+            BufferedReader reader = new BufferedReader(new FileReader("courseData.txt"));
             String line;
-            // Read each line of the file until reaching the end (null)
-            while ((line = br.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("/");
-                if (parts.length >= 8) {
-                    String name = parts[0];
-                    String id = parts[1];
+                String name = parts[0];
+                String id = parts[1];
 
-                    studentName[studentCount] = name;
-                    studentId[studentCount] = id;
-                    studentCount++;
-                }
+                studentName[studentCount] = name;
+                studentId[studentCount] = id;
+                studentCount++;
             }
-            // Handle the case where the file is not found
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found.");
-            // Handle the case where there is an error reading the file
+            reader.close();
         } catch (IOException e) {
-            System.out.println("Error reading the file.");
+            System.out.println("File not found.");
         }
     }
 }
