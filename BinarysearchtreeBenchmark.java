@@ -116,13 +116,78 @@ public class BinarysearchtreeBenchmark {
         // Update the parent's child reference
         if (parent == null) {
             // The current node is the root
-            root = removeRoot(current);
-        } else if (current == parent.left) {
-            parent.left = removeRoot(current);
-        } else {
-            parent.right = removeRoot(current);
-        }
+            if (current.left == null && current.right == null) {
+                root = null;
+            } else if (current.left == null) {
+                root = current.right;
+            } else if (current.right == null) {
+                root = current.left;
+            } else {
+                Course successor = current.right;
+                Course successorParent = current;
 
+                while (successor.left != null) {
+                    successorParent = successor;
+                    successor = successor.left;
+                }
+
+                if (successorParent != current) {
+                    successorParent.left = successor.right;
+                    successor.right = current.right;
+                }
+
+                successor.left = current.left;
+                root = successor;
+            }
+        } else if (current == parent.left) {
+            if (current.left == null && current.right == null) {
+                parent.left = null;
+            } else if (current.left == null) {
+                parent.left = current.right;
+            } else if (current.right == null) {
+                parent.left = current.left;
+            } else {
+                Course successor = current.right;
+                Course successorParent = current;
+
+                while (successor.left != null) {
+                    successorParent = successor;
+                    successor = successor.left;
+                }
+
+                if (successorParent != current) {
+                    successorParent.left = successor.right;
+                    successor.right = current.right;
+                }
+
+                successor.left = current.left;
+                parent.left = successor;
+            }
+        } else {
+            if (current.left == null && current.right == null) {
+                parent.right = null;
+            } else if (current.left == null) {
+                parent.right = current.right;
+            } else if (current.right == null) {
+                parent.right = current.left;
+            } else {
+                Course successor = current.right;
+                Course successorParent = current;
+
+                while (successor.left != null) {
+                    successorParent = successor;
+                    successor = successor.left;
+                }
+
+                if (successorParent != current) {
+                    successorParent.left = successor.right;
+                    successor.right = current.right;
+                }
+
+                successor.left = current.left;
+                parent.right = successor;
+            }
+        }
     }
 
 
