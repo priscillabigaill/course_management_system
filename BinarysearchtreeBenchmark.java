@@ -87,92 +87,44 @@ public class BinarysearchtreeBenchmark {
      *  (2) Remove Course  *
      ***********************/
     public static void removeCourse(String courseName) {
-        // initialize a variable current as the root of the binary tree
+        // Initialize variables for current, parent, and grandparent
         Course current = root;
-        // initialize a variable parent as null
         Course parent = null;
+        Course grandparent = null;
 
-        // traverse the binary tree to try and find a course with the inputted name
+        // Traverse the binary tree to find the course with the inputted name
         while (current != null) {
             int cmp = courseName.compareToIgnoreCase(current.courseName);
             if (cmp == 0) {
                 break;
             } else if (cmp < 0) {
+                grandparent = parent;
                 parent = current;
                 current = current.left;
             } else {
+                grandparent = parent;
                 parent = current;
                 current = current.right;
             }
         }
 
-        // if course is not found
+        // If the course is not found
         if (current == null) {
             return;
         }
 
-        // If the node has no children
-        if (current.left == null && current.right == null) {
-            // if it is the root
-            if (current == root) {
-                // remove it
-                root = null;
-            } else {
-                // if it is not the root
-                // check whether current is its parent's left or right child, then remove it
-                if (current == parent.left) {
-                    parent.left = null;
-                } else {
-                    parent.right = null;
-                }
-            }
+        // Update the parent's child reference
+        if (parent == null) {
+            // The current node is the root
+            root = removeRoot(current);
+        } else if (current == parent.left) {
+            parent.left = removeRoot(current);
+        } else {
+            parent.right = removeRoot(current);
         }
-        // if the node has two children
-        else if (current.left != null && current.right != null) {
-            // set successor as right child of current node
-            // (because successor is always on the right subtree)
-            Course successor = current.right;
-            // traverse to the leftmost node (successor)
-            while (successor.left != null) {
-                successor = successor.left;
-            }
-            // swap left child of current node to the left child of successor
-            successor.left = current.left;
-            // if the successor is not the right child of the current node,
-            // swap the right child of the current node with the right child of the successor
-            if (successor != current.right) {
-                successor.right = current.right;
-            }
-            // if the current node is the root, set the root to the successor
-            if (current == root) {
-                root = successor;
-            } else {
-                // otherwise, set the parent's child pointer to the successor
-                if (current == parent.left) {
-                    parent.left = successor;
-                } else {
-                    parent.right = successor;
-                }
-            }
-            successor.parent = parent;
-        }
-        // if the node only has one child
-        else {
-            // remove it and connect the child to the parent
-            Course child = current.left != null ? current.left : current.right;
-            // if the current node is the root, set the root to the child
-            if (current == root) {
-                root = child;
-            } else {
-                // otherwise, set the parent's child pointer to the child
-                if (current == parent.left) {
-                    parent.left = child;
-                } else {
-                    parent.right = child;
-                }
-            }
-        }
+
     }
+
 
     /***********************
      *  (3) Modify Course  *
