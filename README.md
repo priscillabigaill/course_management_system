@@ -2,6 +2,10 @@
 
 Team Name: AJA
 
+Demo Video: 
+
+PowerPoint Presentation: 
+
 Group Members:
 
 - Clarissa Audrey Fabiola Kusnadi - 2602118490
