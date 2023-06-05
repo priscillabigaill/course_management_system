@@ -186,10 +186,10 @@ public class HashmapDemo {
             return;
         }
 
-        //get the course with matching ID
+        //get the course with matching name
         Course currentCourse = courses.get(courseName);
         if (currentCourse == null) {
-            System.out.println("\n❌No course found with that ID!");
+            System.out.println("\n❌No course found with that name!");
             return;
         }
 
