@@ -1,4 +1,4 @@
-# Course Management System
+# Course Management System 👩🏻‍💻
 
 Team Name: AJA
 
