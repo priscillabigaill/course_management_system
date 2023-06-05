@@ -163,7 +163,7 @@ public class HashmapDemo {
         //create a new student object
         Course.Student newStudent = new Course.Student(name, id);
 
-        //find the course with the specified ID
+        //find the course with the specified name
         Course currentCourse = courses.get(courseName);
 
         if (currentCourse != null) {
