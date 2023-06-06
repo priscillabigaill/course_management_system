@@ -4,7 +4,7 @@ Team Name: AJA
 
 Demo Video: https://www.youtube.com/watch?v=Ph4ttuT5s2w
 
-PowerPoint Presentation: 
+PowerPoint Presentation: https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing
 
 Group Members:
 
