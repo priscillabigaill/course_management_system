@@ -424,7 +424,7 @@ public class BinarysearchtreeDemo {
             return null;
         }
         // if the current node matches the specified course id
-        if (node.courseId.equals(courseName)) {
+        if (node.courseName.equals(courseName)) {
             return node;
         }
         // recursively search the left and right subtrees
