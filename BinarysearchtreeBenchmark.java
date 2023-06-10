@@ -89,7 +89,6 @@ public class BinarysearchtreeBenchmark {
     public static void removeCourse(String courseName) {
         // Check if the tree is empty
         if (root == null) {
-            System.out.println("\n❌No courses available.");
             return;
         }
 
@@ -110,7 +109,6 @@ public class BinarysearchtreeBenchmark {
 
         // If the course is not found
         if (current == null) {
-            System.out.println("❌Course not found.");
             return;
         }
 
@@ -123,7 +121,6 @@ public class BinarysearchtreeBenchmark {
             parent.right = removeCourseNode(current);
         }
 
-        System.out.println("✅Course successfully removed.");
     }
 
     // Helper method to remove the course node
