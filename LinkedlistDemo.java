@@ -334,12 +334,14 @@ public class LinkedlistDemo {
                     String courseLecturerName = cAdd.next();
                     Course.Student studentList = null;
                     addCourse(courseName, courseId, courseDay, courseStartTime, courseEndTime, courseLecturerName, studentList);
+                    break;
                 case "2" :
                     Scanner cRmv = new Scanner(System.in);
                     //prompt for a course to be removed
                     System.out.print("\nCourse Name: ");
                     String rmvCourseName = cRmv.nextLine();
                     removeCourse(rmvCourseName);
+                    break;
                 case "3" :
                     Scanner cModify = new Scanner(System.in);
                     //prompt for a course to be modified
@@ -356,13 +358,17 @@ public class LinkedlistDemo {
                     System.out.print("Lecturer Name: ");
                     String lecturerName = cModify.nextLine();
                     modifyCourse(modCourseName, day, startTime, endTime, lecturerName);
-                case "4" : viewCourse();
+                    break;
+                case "4" :
+                    viewCourse();
+                    break;
                 case "5" :
                     Scanner srchName = new Scanner(System.in);
                     //prompt for a course to search
                     System.out.print("\nCourse Name: ");
                     String srchCourse = srchName.nextLine();
                     searchCoursebyName(srchCourse);
+                    break;
                 case "6" :
                     Scanner addStud = new Scanner(System.in);
                     //prompt for student details
@@ -374,6 +380,7 @@ public class LinkedlistDemo {
                     System.out.print("Enter course name to add the student: ");
                     String addTo = addStud.nextLine();
                     addStudent(name, id, addTo);
+                    break;
                 case "7" :
                     Scanner rmvStud = new Scanner(System.in);
                     //prompt the course name and student id to be removed
@@ -382,6 +389,7 @@ public class LinkedlistDemo {
                     System.out.print("Student ID: ");
                     String rmvId = rmvStud.nextLine();
                     removeStudent(rmvName, rmvId);
+                    break;
             }
         } while(!choice.equals("8"));
     }
