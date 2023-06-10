@@ -105,110 +105,78 @@ public class BinarysearchtreeDemo {
      *  (2) Remove Course  *
      ***********************/
     public static void removeCourse(String courseName) {
-        // Initialize variables for current, parent, and grandparent
+        // Check if the tree is empty
+        if (root == null) {
+            System.out.println("\n❌No courses available.");
+            return;
+        }
+
+        // Find the course to be removed and its parent node
         Course current = root;
         Course parent = null;
-        Course grandparent = null;
 
-        // Traverse the binary tree to find the course with the inputted name
-        while (current != null) {
+        while (current != null && !current.courseName.equalsIgnoreCase(courseName)) {
+            parent = current;
             int cmp = courseName.compareToIgnoreCase(current.courseName);
-            if (cmp == 0) {
-                break;
-            } else if (cmp < 0) {
-                grandparent = parent;
-                parent = current;
+
+            if (cmp < 0) {
                 current = current.left;
             } else {
-                grandparent = parent;
-                parent = current;
                 current = current.right;
             }
         }
 
         // If the course is not found
         if (current == null) {
-            System.out.println("Course not found.");
+            System.out.println("❌Course not found.");
             return;
         }
 
-        // Update the parent's child reference
-        if (parent == null) {
-            // The current node is the root
-            if (current.left == null && current.right == null) {
-                root = null;
-            } else if (current.left == null) {
-                root = current.right;
-            } else if (current.right == null) {
-                root = current.left;
-            } else {
-                Course successor = current.right;
-                Course successorParent = current;
-
-                while (successor.left != null) {
-                    successorParent = successor;
-                    successor = successor.left;
-                }
-
-                if (successorParent != current) {
-                    successorParent.left = successor.right;
-                    successor.right = current.right;
-                }
-
-                successor.left = current.left;
-                root = successor;
-            }
-        } else if (current == parent.left) {
-            if (current.left == null && current.right == null) {
-                parent.left = null;
-            } else if (current.left == null) {
-                parent.left = current.right;
-            } else if (current.right == null) {
-                parent.left = current.left;
-            } else {
-                Course successor = current.right;
-                Course successorParent = current;
-
-                while (successor.left != null) {
-                    successorParent = successor;
-                    successor = successor.left;
-                }
-
-                if (successorParent != current) {
-                    successorParent.left = successor.right;
-                    successor.right = current.right;
-                }
-
-                successor.left = current.left;
-                parent.left = successor;
-            }
+        // Remove the course from the tree
+        if (current == root) {
+            root = removeCourseNode(current);
+        } else if (parent.left == current) {
+            parent.left = removeCourseNode(current);
         } else {
-            if (current.left == null && current.right == null) {
-                parent.right = null;
-            } else if (current.left == null) {
-                parent.right = current.right;
-            } else if (current.right == null) {
-                parent.right = current.left;
-            } else {
-                Course successor = current.right;
-                Course successorParent = current;
-
-                while (successor.left != null) {
-                    successorParent = successor;
-                    successor = successor.left;
-                }
-
-                if (successorParent != current) {
-                    successorParent.left = successor.right;
-                    successor.right = current.right;
-                }
-
-                successor.left = current.left;
-                parent.right = successor;
-            }
+            parent.right = removeCourseNode(current);
         }
 
-        System.out.println("Course successfully removed.");
+        System.out.println("✅Course successfully removed.");
+    }
+
+    // Helper method to remove the course node
+    private static Course removeCourseNode(Course course) {
+        // Case 1: The course has no children
+        if (course.left == null && course.right == null) {
+            return null;
+        }
+
+        // Case 2: The course has only one child
+        if (course.left == null) {
+            return course.right;
+        }
+        if (course.right == null) {
+            return course.left;
+        }
+
+        // Case 3: The course has two children
+        Course successor = findSuccessor(course.right);
+        successor.left = course.left;
+        return course.right;
+    }
+
+    // Helper method to find the successor node (smallest node in the right subtree)
+    private static Course findSuccessor(Course node) {
+        Course parent = null;
+        while (node.left != null) {
+            parent = node;
+            node = node.left;
+        }
+        if (parent != null) {
+            parent.left = node.right;
+            node.right = null;
+        }
+        return node;
     }
 
 
