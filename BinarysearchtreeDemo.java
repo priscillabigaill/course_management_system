@@ -361,7 +361,7 @@ public class BinarysearchtreeDemo {
             return false;
         }
         // if the current node matches the specified course ID, add the student to the course
-        if (node.courseId.equals(courseName)) {
+        if (node.courseName.equals(courseName)) {
             if (node.studentListHead == null) {
                 // if the student list is empty, set the new student as the head of the list
                 node.studentListHead = node.studentListTail = newStudent;
