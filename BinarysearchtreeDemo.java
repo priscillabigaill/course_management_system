@@ -180,9 +180,10 @@ public class BinarysearchtreeDemo {
     }
 
 
+
     /***********************
-    *  (3) Modify Course  *
-    ***********************/
+     *  (3) Modify Course  *
+     ***********************/
     public static void modifyCourse(String courseName, String day, String startTime, String endTime, String lecturerName) {
         // search for course with matching name
         Course currentCourse = root;
@@ -197,7 +198,7 @@ public class BinarysearchtreeDemo {
         }
 
         // if course is found
-        
+
         // modify course with new information
         currentCourse.courseDay = day;
         currentCourse.courseStartTime = startTime;
@@ -244,8 +245,8 @@ public class BinarysearchtreeDemo {
 
 
     /*******************************
-    *  (5) Search Course by Name  *
-    *******************************/
+     *  (5) Search Course by Name  *
+     *******************************/
 
     public static void searchCoursebyName(String courseName) {
         // Recursively search for the specified course in the tree
@@ -436,7 +437,7 @@ public class BinarysearchtreeDemo {
         }
         return false;
     }
-    
+
     //Main Method and Program Execution//
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -470,33 +471,33 @@ public class BinarysearchtreeDemo {
                     String courseToRemove = remove.next();
                     removeCourse(courseToRemove);
                     break;
-               case "3":
+                case "3":
                     Scanner modify = new Scanner(System.in);
                     //prompt for a course to modify
                     System.out.print("\nCourse Name: ");
                     String courseToModify = modify.nextLine();
 
-                   // search for course with matching name
-                   Course currentCourse = root;
-                   while (currentCourse != null && !currentCourse.courseName.equals(courseToModify)) {
-                       currentCourse = currentCourse.left != null ? currentCourse.left : currentCourse.right;
-                   }
+                    // search for course with matching name
+                    Course currentCourse = root;
+                    while (currentCourse != null && !currentCourse.courseName.equals(courseToModify)) {
+                        currentCourse = currentCourse.left != null ? currentCourse.left : currentCourse.right;
+                    }
 
-                   // if the course is not found
-                   if (currentCourse == null) {
-                       System.out.println("\n❌No course found with that name!");
-                   } else {
-                       System.out.println("\nEnter new course information: ");
-                       System.out.print("Day: ");
-                       String newCourseDay = modify.nextLine();
-                       System.out.print("Start Time: ");
-                       String newCourseStartTime = modify.nextLine();
-                       System.out.print("End Time: ");
-                       String newCourseEndTime = modify.nextLine();
-                       System.out.print("Lecturer Name: ");
-                       String newLecturerName = modify.nextLine();
-                       modifyCourse(courseToModify, newCourseDay, newCourseStartTime, newCourseEndTime, newLecturerName);
-                   }
+                    // if the course is not found
+                    if (currentCourse == null) {
+                        System.out.println("\n❌No course found with that name!");
+                    } else {
+                        System.out.println("\nEnter new course information: ");
+                        System.out.print("Day: ");
+                        String newCourseDay = modify.nextLine();
+                        System.out.print("Start Time: ");
+                        String newCourseStartTime = modify.nextLine();
+                        System.out.print("End Time: ");
+                        String newCourseEndTime = modify.nextLine();
+                        System.out.print("Lecturer Name: ");
+                        String newLecturerName = modify.nextLine();
+                        modifyCourse(courseToModify, newCourseDay, newCourseStartTime, newCourseEndTime, newLecturerName);
+                    }
                     break;
                 case "4" :
                     viewCourses();
@@ -519,7 +520,7 @@ public class BinarysearchtreeDemo {
                     String courseToAddStudent = AddStud.nextLine();
                     addStudent(name, id, courseToAddStudent);
                     break;
-                case "7": 
+                case "7":
                     // prompt user to input course name ans student id
                     Scanner removeStudent = new Scanner(System.in);
                     System.out.print("\nCourse Name: ");
