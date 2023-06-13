@@ -15,7 +15,7 @@ A course management system is a program that allows educational institutions to 
 [![Report](https://img.shields.io/badge/Report-Read-blue?logo=microsoft-word)](https://docs.google.com/document/d/1mjHkZoHQV8qD3DTPtIsXj8iK5Gs6ELE1KsqgIhwiFaI/edit?usp=sharing)
 [![PPT](https://img.shields.io/badge/PPT-Read-yellow?logo=microsoft-powerpoint)](https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing)
 
-#### Function of the Program
+### Function of the Program
 
 1. Add course -  This function allows the user to add a new course to the system.
 2. Remove course -  This function allows the user to remove a course from the system. 
@@ -25,18 +25,14 @@ A course management system is a program that allows educational institutions to 
 6. Add student to course - This function allows the user to add a student to a particular course.
 7. Remove student from course - This function allows the user to remove a student from a specific course.
 
-
-
-#### Data Structures Used
+### Data Structures Used
 
 1. Array list
 2. Linked list
 3. Binary search tree
 4. Hash map
 
-
-
-#### Contents
+### Contents
 
 1. ArraylistBenchmark.java - File for benchmarking the performance of the course management system using the ArrayList data structure.
 2. ArrahlistDemo.java - File demonstrating the usage of ArrayList in the course management system. 
@@ -51,9 +47,7 @@ A course management system is a program that allows educational institutions to 
 11. courseData.txt - Text file containing the data of courses for the course management system.
 12. studentData.txt - Text file containing the data of students for the course management system.
 
-
-
-#### Clone Locally
+### Clone Locally
 
 ```
 $ git clone https://github.com/priscillabigaill/course_management_system
