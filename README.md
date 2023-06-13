@@ -2,17 +2,18 @@
 
 Team Name: AJA
 
-[![Video](https://img.shields.io/badge/Demonstration-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=Ph4ttuT5s2w)
-[![Report](https://img.shields.io/badge/Report-Read-blue?logo=microsoft-word)](https://docs.google.com/document/d/1mjHkZoHQV8qD3DTPtIsXj8iK5Gs6ELE1KsqgIhwiFaI/edit?usp=sharing)
-[![PPT](https://img.shields.io/badge/PPT-Read-yellow?logo=microsoft-powerpoint)](https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing)
-
 Group Members:
 
 - Clarissa Audrey Fabiola Kusnadi - 2602118490
 - Jeffrey - 2602118484
 - Priscilla Abigail Munthe - 2602109883
 
+### Introduction
+A course management system is a program that allows educational institutions to efficiently manage their courses, students, and related information. It enables administrators to add, remove, modify courses, view course details, search for courses, and manage student enrollments.
 
+[![Video](https://img.shields.io/badge/Demonstration-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=Ph4ttuT5s2w)
+[![Report](https://img.shields.io/badge/Report-Read-blue?logo=microsoft-word)](https://docs.google.com/document/d/1mjHkZoHQV8qD3DTPtIsXj8iK5Gs6ELE1KsqgIhwiFaI/edit?usp=sharing)
+[![PPT](https://img.shields.io/badge/PPT-Read-yellow?logo=microsoft-powerpoint)](https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing)
 
 #### Function of the Program
 
