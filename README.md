@@ -2,9 +2,9 @@
 
 Team Name: AJA
 
-Demo Video: https://www.youtube.com/watch?v=Ph4ttuT5s2w
-
-PowerPoint Presentation: https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing
+[![Video](https://img.shields.io/badge/Demo Video-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=Ph4ttuT5s2w)
+[![Report](https://img.shields.io/badge/Report-Read-blue?logo=microsoft-word)](https://docs.google.com/document/d/1mjHkZoHQV8qD3DTPtIsXj8iK5Gs6ELE1KsqgIhwiFaI/edit?usp=sharing)
+[![PPT](https://img.shields.io/badge/PPT-Read-orange?logo=microsoft-powerpoint)](https://docs.google.com/presentation/d/1YmUCjrHznavqqByizH3RVyVpZhan5vzlIQT3d8d0Vsw/edit?usp=sharing)
 
 Group Members:
 
